@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const FetchShare = () => {
+const FetchShare = ({getSharePrice}) => {
+
+    const [symbol, setSymbol] = useState("");
+
     
+
   return (
-      <h2>I am the Fetch Share component</h2>
+     <form onSubmit={handleOnSubmit}> 
+         <input type="text" placeholder='Enter share symbol' value={symbol} onChange={handleTextChange} autofocus required />
+         <input type="submit" value="Submit" />
+     </form>
   )};
 
 
