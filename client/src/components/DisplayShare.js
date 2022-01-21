@@ -1,9 +1,14 @@
 import React from 'react';
 
-const DisplayShare = () => {
+const DisplayShare = ({symbolInfo}) => {
+
 
     return (
-        <p>I will display the share price</p>
+       <>
+           {/* <p>{symbolInfo['01. symbol']} {symbolInfo['05. price']}</p> */}
+
+           <p></p>
+       </>
         );
 };
 
