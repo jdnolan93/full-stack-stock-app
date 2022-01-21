@@ -8,3 +8,4 @@ const SharesAppContainer = () => {
 };
 
 export default SharesAppContainer;
+
