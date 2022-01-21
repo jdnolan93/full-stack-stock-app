@@ -4,22 +4,22 @@ import FetchShare from '../components/FetchShare';
 
 const AddShareContainer = ({apiKey}) => {
 
-    const [share, setShare] = useState("");
+    const [shareInfo, setShareInfo] = useState("");
 
-    const getSharePrice = symbol => {
+    const getShareInfo = symbol => {
 
         const url = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${symbol}&apikey=${apiKey}`;
 
         fetch(url)
         .then(response => response.json())
-        .then(data => setShare(data['Global Quote']));
+        .then(data => setShareInfo(data['Global Quote']));
     }
 
   return (
 
       <>
         <h1>Add Share Container</h1>
-        <FetchShare getSharePrice={getSharePrice}/>
+        <FetchShare getShareInfo={getShareInfo} shareInfo={shareInfo}/>
         <AddShare />
       </>
     );
