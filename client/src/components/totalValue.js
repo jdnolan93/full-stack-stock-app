@@ -1,7 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const totalValue = () => {
-  return <div>this is total value</div>;
+  return (
+    <div>
+      <h3>this is total value component</h3>
+    </div>
+  );
 };
 
 export default totalValue;

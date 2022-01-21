@@ -1,18 +1,18 @@
 import React from "react";
-import totalValue from "../components/totalValue";
-import currentValuePortfolioChart from "../components/currentValuePortfolioChart";
+import TotalValue from "../components/TotalValue";
+import CurrentValuePortfolioChart from "../components/CurrentValuePortfolioChart";
 const totalValueContainer = () => {
   return (
     <div>
       <h1>this total value container</h1>
       <hr />
       <div>
-          this is total value
-        <totalValue />
+          
+        <TotalValue />
       </div>
-      this is portfolio chart
+
       <div>
-        <currentValuePortfolioChart />
+        <CurrentValuePortfolioChart />
       </div>
     </div>
   );

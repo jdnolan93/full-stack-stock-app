@@ -1,7 +1,12 @@
 import React from "react";
 
-const currentValuePortfolioChart = () => {
-  return <div>Hi this is current value of portfolio chart</div>;
+const CurrentValuePortfolioChart = () => {
+  return (
+    <div>
+      <h3>this is current value of portfolio chart component</h3>
+      
+    </div>
+  );
 };
 
-export default currentValuePortfolioChart;
+export default CurrentValuePortfolioChart;

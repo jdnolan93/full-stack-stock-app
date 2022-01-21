@@ -1,11 +1,16 @@
-import React from 'react';
-import getApiKey from '../key';
+import React from "react";
+import TotalValueContainer from "./TotalValueContainer";
 
-const apiKey = getApiKey()
+// import getApiKey from '../key';
+
+// const apiKey = getApiKey()
 
 const SharesAppContainer = () => {
-  return <div></div>;
+  return (
+    <div>
+      <TotalValueContainer />
+    </div>
+  );
 };
 
 export default SharesAppContainer;
-

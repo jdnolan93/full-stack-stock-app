@@ -4,6 +4,7 @@ import SharesAppContainer from './containers/SharesAppContainer';
 function App() {
   return (
     <SharesAppContainer />
+    
   );
 }
 
