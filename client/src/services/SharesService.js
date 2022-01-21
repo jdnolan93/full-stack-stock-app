@@ -20,3 +20,8 @@ export const deleteShare = (id) => {
     })
 }
 
+export const getShare = (id) => {
+  return fetch(baseURL + id)
+      .then(res => res.json())
+}
+
