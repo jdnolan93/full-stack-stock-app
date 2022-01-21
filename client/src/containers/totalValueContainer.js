@@ -1,7 +1,7 @@
 import React from "react";
 import TotalValue from "../components/TotalValue";
 import CurrentValuePortfolioChart from "../components/CurrentValuePortfolioChart";
-const totalValueContainer = () => {
+const TotalValueContainer = () => {
   return (
     <div>
       <h1>this total value container</h1>
@@ -18,4 +18,4 @@ const totalValueContainer = () => {
   );
 };
 
-export default totalValueContainer;
+export default TotalValueContainer;

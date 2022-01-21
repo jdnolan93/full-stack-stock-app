@@ -1,6 +1,6 @@
 import React from "react";
 
-const totalValue = () => {
+const TotalValue = () => {
   return (
     <div>
       <h3>this is total value component</h3>
@@ -8,4 +8,4 @@ const totalValue = () => {
   );
 };
 
-export default totalValue;
+export default TotalValue;
