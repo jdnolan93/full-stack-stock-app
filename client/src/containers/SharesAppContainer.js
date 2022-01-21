@@ -2,12 +2,13 @@ import React from 'react';
 import getApiKey from '../key';
 import AddShareContainer from './AddShareContainer';
 
-const apiKey = getApiKey()
 
 const SharesAppContainer = () => {
 
+  const apiKey = getApiKey()
+
   return (
-    <AddShareContainer/>
+    <AddShareContainer apiKey={apiKey}/>
   );
 };
 
