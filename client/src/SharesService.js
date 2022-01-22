@@ -5,6 +5,10 @@ export const getShares = () => {
         .then(res => res.json())
 }
 
+export const getShareDetails = () => {
+    return fetch()
+}
+
 export const postShare = (payload) => {
     return fetch(baseURL, {
         method: 'POST',
