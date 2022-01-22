@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import AddShare from '../components/AddShare';
 import FetchShare from '../components/FetchShare';
 
-const AddShareContainer = ({apiKey}) => {
+const AddShareContainer = ({apiKey, postShareObject}) => {
 
     const [shareSearchArray, setShareISearchArray] = useState([]);
     
@@ -28,12 +28,13 @@ const AddShareContainer = ({apiKey}) => {
         .then(data => setSymbolInfo(data['Global Quote']));        
     }
 
-
   return (
       <>
         <h1>Add Share Container</h1>
+
         <FetchShare getInfo={symbol => getSymbolInfo(symbol)} updateShareInfo={share => setShareInfo(share)} getArray={keywords => getShareSearchArray(keywords)} shareSearchArray={shareSearchArray}/>
-        <AddShare symbolInfo={symbolInfo} shareInfo={shareInfo}/>
+
+        <AddShare symbolInfo={symbolInfo} shareInfo={shareInfo} postShareObject={postShareObject}/>
       </>
     );
 };
