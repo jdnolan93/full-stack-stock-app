@@ -1,20 +1,7 @@
 import React, { useState } from 'react';
-import DisplayShare from './DisplayShare';
+import DisplayShareList from './DisplayShareList';
 
-const FetchShare = ({getSymbolInfo, getShareSearchArray, shareSearchArray, symbolInfo}) => {
-
-    // const [symbol, setSymbol] = useState("");
-
-    // const handleTextChange = event => setSymbol(event.target.value);
-
-    // const handleOnSubmit = event => {
-
-    //     event.preventDefault();
-
-    //     getSymbolInfo(symbol);
-
-    //     setSymbol("");
-    // }
+const FetchShare = ({getInfo, getArray, shareSearchArray, symbolInfo}) => {
 
     const [keywords, setKeywords] = useState(""); 
 
@@ -24,18 +11,18 @@ const FetchShare = ({getSymbolInfo, getShareSearchArray, shareSearchArray, symbo
 
         event.preventDefault();
 
-        getShareSearchArray(keywords);
+        getArray(keywords);
 
+        setKeywords("");
     }
-
 
   return (
       <>
         <form onSubmit={handleOnSubmit}> 
-            <input type="text" placeholder='Enter company or share symbol' value={keywords} onChange={handleTextChange} autoFocus required/>
+            <input type="text" placeholder='Enter company or share symbol' value={keywords} onChange={handleTextChange} size="30" autoFocus required/>
             <input type="submit" value="Submit" />
         </form>
-        <DisplayShare symbolInfo={symbolInfo} shareSearchArray={shareSearchArray}/>
+       <DisplayShareList getInfo={getInfo} symbolInfo={symbolInfo} shareSearchArray={shareSearchArray} />
 
       </>
   )};
