@@ -1,11 +1,9 @@
 import React from 'react';
 import DisplayShare from './DisplayShare';
 
+const DisplayShareList = ({shareSearchArray, getInfo, updateShareInfo}) => {
 
-
-const DisplayShareList = ({shareSearchArray, getInfo, symbolInfo}) => {
-
-   const displayShareList = shareSearchArray.map(share => <DisplayShare getInfo={getInfo} share={share} key={share['1. symbol']} />);
+   const displayShareList = shareSearchArray.map(share => <DisplayShare getInfo={getInfo} share={share} updateShareInfo={updateShareInfo} key={share['1. symbol']} />);
     
   return (
     <>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import DisplayShareList from './DisplayShareList';
 
-const FetchShare = ({getInfo, getArray, shareSearchArray, symbolInfo}) => {
+const FetchShare = ({getInfo, updateShareInfo, getArray, shareSearchArray}) => {
 
     const [keywords, setKeywords] = useState(""); 
 
@@ -22,8 +22,7 @@ const FetchShare = ({getInfo, getArray, shareSearchArray, symbolInfo}) => {
             <input type="text" placeholder='Enter company or share symbol' value={keywords} onChange={handleTextChange} size="30" autoFocus required/>
             <input type="submit" value="Submit" />
         </form>
-       <DisplayShareList getInfo={getInfo} symbolInfo={symbolInfo} shareSearchArray={shareSearchArray} />
-
+       <DisplayShareList getInfo={getInfo} shareSearchArray={shareSearchArray} updateShareInfo={updateShareInfo}/>
       </>
   )};
 
