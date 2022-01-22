@@ -18,6 +18,7 @@ const FetchShare = ({getInfo, updateShareInfo, getArray, shareSearchArray}) => {
 
   return (
       <>
+      <h2>I am the fetch shares component</h2>
         <form onSubmit={handleOnSubmit}> 
             <input type="text" placeholder='Enter company or share symbol' value={keywords} onChange={handleTextChange} size="30" autoFocus required/>
             <input type="submit" value="Submit" />

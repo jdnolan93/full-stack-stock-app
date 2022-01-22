@@ -7,7 +7,7 @@ const DisplayShareList = ({shareSearchArray, getInfo, updateShareInfo}) => {
     
   return (
     <>
-        <p>I am a list of shares</p>
+        <h2>I am the list of shares component</h2>
         <ul>
             {displayShareList}
         </ul>

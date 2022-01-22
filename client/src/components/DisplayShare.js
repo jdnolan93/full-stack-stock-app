@@ -3,9 +3,11 @@ import React from 'react';
 const DisplayShare = ({share, getInfo, updateShareInfo}) => {
 
     const handleClick = () => {
-        getInfo(share['1. symbol'], share);
+        getInfo(share['1. symbol']);
         updateShareInfo(share);
     };
+
+    // console.log(share)
     
     return (
         <li>
