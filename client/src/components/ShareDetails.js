@@ -47,10 +47,13 @@ const ShareDetails = () => {
             if (shareData.hasOwnProperty(key)) {
                 sharesDataArr.push([parseInt((new Date(key).getTime() / 1000).toFixed(0))].concat(Object.values(shareData[key])))
             }
-        } console.log(sharesDataArr)
+            
+        }
+        console.log(sharesDataArr)
     }
+        
     
-    useEffect(() => getShareData(), []);
+    useEffect(() => getShareData(defaultSymbol, defaultTimeFrame), []);
     
     useEffect(() => {
         getShares().then((result) => setShares(result))
@@ -103,7 +106,7 @@ const ShareDetails = () => {
         <input type="submit" value="Select" />
         </form>
         <br />
-        <ChartDesign selectedShare={chartHeadline}/>
+        <ChartDesign selectedShare={chartHeadline} shareData={shareData}/>
         </div>
         </>)
 };

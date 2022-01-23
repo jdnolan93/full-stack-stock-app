@@ -5,7 +5,7 @@ import HighchartsReact from "highcharts-react-official";
 import chartData from "./ChartData";
 
 
-const ChartDesign = ({selectedShare}) => {
+const ChartDesign = ({selectedShare, shareData}) => {
 
 const mockData = chartData()
 
