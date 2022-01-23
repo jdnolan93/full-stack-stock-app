@@ -4,24 +4,47 @@ import HighStock from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
 import chartData from "./ChartData";
 
+
+const ChartDesign = ({selectedShare}) => {
+
 const mockData = chartData()
 
 
-let groupingUnits = [
-  [
-    "week", // unit name
-    [1] // allowed multiples
-  ],
-  ["month", [1, 2, 3, 4, 6]]
-];
-
 let mockOptions = {
-  rangeSelector: {
-    selected: 1
+  rangeSelector: {buttons: [{
+    type: 'month',
+    count: 1,
+    text: '1m',
+    title: 'View 1 month'
+}, {
+    type: 'month',
+    count: 3,
+    text: '3m',
+    title: 'View 3 months'
+}, {
+    type: 'month',
+    count: 6,
+    text: '6m',
+    title: 'View 6 months'
+}, {
+    type: 'ytd',
+    text: 'YTD',
+    title: 'View year to date'
+}, {
+    type: 'year',
+    count: 1,
+    text: '1y',
+    title: 'View 1 year'
+}, {
+    type: 'all',
+    text: 'All',
+    title: 'View all'
+}],
+    selected: 0
   },
 
   title: {
-    text: "AAPL Historical"
+    text: selectedShare
   },
 
   yAxis: [
@@ -31,7 +54,7 @@ let mockOptions = {
         x: -3
       },
       title: {
-        text: "OHLC"
+        text: "Price"
       },
       height: "60%",
       lineWidth: 2,
@@ -95,7 +118,7 @@ let mockOptions = {
 };
 
 
-const ChartDesign = () => {
+
   return (
     <div className="App">
       {
