@@ -1,6 +1,7 @@
 import React, {useState } from 'react';
 import AddShare from '../components/addShare/AddShare';
 import FetchShare from '../components/addShare/FetchShare';
+import '../components/addShare/AddShare.css'
 
 const AddShareContainer = ({apiKey, postShareObject}) => {
 
@@ -29,13 +30,13 @@ const AddShareContainer = ({apiKey, postShareObject}) => {
     }
 
   return (
-      <>
-        <h1>Add Share Container</h1>
+      <section id="add-share-container">
+        <h1>I am the Add Share container</h1>
 
         <FetchShare getInfo={symbol => getSymbolInfo(symbol)} updateShareInfo={share => setShareInfo(share)} getArray={keywords => getShareSearchArray(keywords)} shareSearchArray={shareSearchArray}/>
 
         <AddShare symbolInfo={symbolInfo} shareInfo={shareInfo} postShareObject={postShareObject}/>
-      </>
+      </section>
     );
 };
 

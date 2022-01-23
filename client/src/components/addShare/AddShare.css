@@ -1,0 +1,46 @@
+#add-share-container {
+  border: solid 1px lightgrey;
+  border-radius: 5%;
+  width: 650px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 3rem;
+}
+
+.fetch-shares-container {
+  text-align: center;
+}
+
+.display-share-list-container {
+  border: solid 1px lightgrey;
+  border-radius: 5%;
+  margin: 2rem;
+  text-align: justify;
+}
+
+.add-share-container {
+  border: solid 1px lightgrey;
+  border-radius: 5%;
+  margin: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+}
+
+.clear-list {
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+  text-align: right;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
