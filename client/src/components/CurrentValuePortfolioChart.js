@@ -1,10 +1,18 @@
 import React from "react";
+import { Container, Col, Row } from "react-bootstrap";
 
-const CurrentValuePortfolioChart = () => {
+const CurrentValuePortfolioChart = ({ shareObject }) => {
   return (
     <div>
-      <h3>this is current value of portfolio chart component</h3>
-      
+     
+      <Container style={{ fontSize: "10px" }}>
+        <Row>
+          <Col>{shareObject.name}</Col>
+          <Col>{shareObject.symbol}</Col>
+          <Col>{shareObject.noOfShares}</Col>
+          <Col>{shareObject.noOfShares}</Col>
+        </Row>
+      </Container>
     </div>
   );
 };
