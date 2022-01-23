@@ -7,7 +7,7 @@ import chartData from "./ChartData";
 
 const ChartDesign = ({selectedShare, shareData}) => {
 
-const mockData = chartData()
+const mockData = shareData
 
 
 let mockOptions = {
@@ -39,7 +39,7 @@ let mockOptions = {
     type: 'all',
     text: 'All',
     title: 'View all'
-}],
+}], 
     selected: 0
   },
 

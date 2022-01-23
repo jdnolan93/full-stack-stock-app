@@ -3,10 +3,6 @@ import getApiKey from '../key';
 import { getShares } from '../SharesService';
 
 //below are import needed for the chart
-import { render } from 'react-dom';
-import Highcharts from 'highcharts/highstock';
-import HighchartsReact from 'highcharts-react-official';
-import chartData from './ChartData';
 import ChartDesign from './ChartDesign';
 
 
@@ -19,12 +15,24 @@ const ShareDetails = () => {
     const [selectedTime, setSelectedTime] = useState ("DAILY")
     const [shareData, setShareData] = useState([])
     const [chartHeadline, setChartHeadline] = useState(selectedShare)
+    const [loading, setLoading] = useState(true)
     
-    const defaultSymbol = "MSFT"
-    const defaultTimeFrame = "WEEKLY"
-    const getShareData = (symbol, timeFrame) => {
-        const inputSymbol = symbol ? symbol : defaultSymbol
-        const inputTimeFrame = timeFrame ? timeFrame : defaultTimeFrame
+    const getShareData = async (symbol, timeFrame) => {
+        setLoading(true)
+
+        const convertDataForChart = (inputData) => {
+            let sharesDataArr = []
+                  for (let key in inputData) {
+              
+                    if (inputData.hasOwnProperty(key)) {
+                        let prices = Object.values(inputData[key])
+                        prices = prices.map(Number)
+                        sharesDataArr.push([parseInt((new Date(key).getTime()).toFixed(0))].concat(prices))
+                    }
+                      
+                  }
+          return sharesDataArr.reverse()
+        }
 
         const timeFrameURL = () => {
             if (selectedTime === "DAILY") {
@@ -37,23 +45,21 @@ const ShareDetails = () => {
                 return "Monthly Time Series"
             }
         }
-        const sharesApiURL = `https://www.alphavantage.co/query?function=TIME_SERIES_${inputTimeFrame}&symbol=${inputSymbol}&apikey=${apiKey}`
-        fetch(sharesApiURL)
+        const sharesApiURL = `https://www.alphavantage.co/query?function=TIME_SERIES_${timeFrame}&symbol=${symbol}&apikey=${apiKey}`
+        return fetch(sharesApiURL)
         .then(respose => respose.json())
-        .then(data => setShareData(data[timeFrameURL()]))
-        let sharesDataArr = []
-        for (let key in shareData) {
-    
-            if (shareData.hasOwnProperty(key)) {
-                sharesDataArr.push([parseInt((new Date(key).getTime() / 1000).toFixed(0))].concat(Object.values(shareData[key])))
-            }
-            
-        }
-        console.log(sharesDataArr)
+        .then((data) => 
+            convertDataForChart(data[timeFrameURL()]), setLoading(false))
+        .catch(err=>console.log(err))
+        
+        
+        
     }
         
     
-    useEffect(() => getShareData(defaultSymbol, defaultTimeFrame), []);
+    useEffect(() => {
+        getShareData(selectedShare, selectedTime).then((result) => setShareData(result))}
+        , []);
     
     useEffect(() => {
         getShares().then((result) => setShares(result))
@@ -77,14 +83,16 @@ const ShareDetails = () => {
     const handleShareData = (event) => {
         event.preventDefault();
         setChartHeadline(selectedShare)
-        // setSelectedTime(event.target.value)
-        const shareToGet = selectedShare
-        const timeFrameToGet = selectedTime
-        getShareData(shareToGet, timeFrameToGet)
+        getShareData(selectedShare, selectedTime).then((result) => setShareData(result))
 
     }
 
-    
+    const chartFunc = () => {
+    if (loading) {
+        return <h2>Page is still loading</h2>
+    }
+    return <ChartDesign selectedShare={chartHeadline} shareData={shareData}/>
+    }
 
 
   return (
@@ -106,7 +114,7 @@ const ShareDetails = () => {
         <input type="submit" value="Select" />
         </form>
         <br />
-        <ChartDesign selectedShare={chartHeadline} shareData={shareData}/>
+        {chartFunc()}
         </div>
         </>)
 };
