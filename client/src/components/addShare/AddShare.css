@@ -9,12 +9,15 @@
 
 .fetch-shares-container {
   text-align: center;
+  padding-top: 2rem;
 }
 
 .display-share-list-container {
   border: solid 1px lightgrey;
   border-radius: 5%;
   margin: 2rem;
+  padding-top: 2rem;
+  padding-left: 1rem;
   text-align: justify;
 }
 
@@ -23,6 +26,8 @@
   border-radius: 5%;
   margin: 2rem;
   padding-left: 2rem;
+  padding-top: 2rem;
+
   padding-bottom: 2rem;
 }
 

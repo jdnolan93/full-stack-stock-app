@@ -12,8 +12,7 @@ const DisplayShareList = ({shareSearchArray, getInfo, updateShareInfo, clearArra
     
   return (
     <div className='display-share-list-container'>
-        <h2>I am the list of shares component</h2>
-
+        <p>Select a share to add to portfolio:</p>
         <ul className="display-list"> 
             {displayShareList}
         </ul>

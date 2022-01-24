@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import ReactTooltip from "react-tooltip";
 import './AddShare.css';
 
@@ -29,19 +29,17 @@ const AddShare = ({symbolInfo, shareInfo, postShareObject, updateShareInfo}) => 
 
     event.preventDefault();
 
+
     if(!isArrayEmpty) {
 
       const shareObject = {
         name: shareInfo['2. name'],
         symbol: shareInfo['1. symbol'],
-        noOfShares: Number(noOfShares)
+        noOfShares: Number(noOfShares),
+        price: symbolInfo['05. price']
       } 
-      postShareObject(shareObject);  
-      
-      // const priceObject = {
-      //   symbol: shareInfo['1. symbol'],
-      //   price: symbolInfo['05. price']
-      // }
+
+      postShareObject(shareObject);        
     }
 
     updateShareInfo({});
@@ -51,9 +49,9 @@ const AddShare = ({symbolInfo, shareInfo, postShareObject, updateShareInfo}) => 
 
   return (
     <div className='add-share-container'>
-      <h2>I am the Add Share component</h2>
+
       <div className='display'>
-      {display} &nbsp; {moreInfo()}
+      {display} &nbsp; {moreInfo()} 
       </div> 
       <form onSubmit={handleOnSubmit}> 
         <input type="number" min="1" placeholder='No. of shares' onChange={handleOnChange} value={noOfShares} required/>
