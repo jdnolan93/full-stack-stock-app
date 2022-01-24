@@ -5,7 +5,7 @@ import '../components/addShare/AddShare.css'
 
 const AddShareContainer = ({apiKey, postShareObject}) => {
 
-    const [shareSearchArray, setShareISearchArray] = useState([]);
+    const [shareSearchArray, setShareSearchArray] = useState([]);
     
     const [symbolInfo, setSymbolInfo] = useState({}); 
 
@@ -17,7 +17,7 @@ const AddShareContainer = ({apiKey, postShareObject}) => {
 
         fetch(url)
         .then(response => response.json())
-        .then(data => setShareISearchArray(data.bestMatches));
+        .then(data => setShareSearchArray(data.bestMatches));
     } 
 
     const getSymbolInfo = symbol => {
@@ -33,7 +33,7 @@ const AddShareContainer = ({apiKey, postShareObject}) => {
       <section id="add-share-container">
         <h1>I am the Add Share container</h1>
 
-        <FetchShare getInfo={symbol => getSymbolInfo(symbol)} updateShareInfo={share => setShareInfo(share)} getArray={keywords => getShareSearchArray(keywords)} shareSearchArray={shareSearchArray}/>
+        <FetchShare getInfo={symbol => getSymbolInfo(symbol)} updateShareInfo={share => setShareInfo(share)} getArray={keywords => getShareSearchArray(keywords)} shareSearchArray={shareSearchArray} clearArray={emptyArray => setShareSearchArray(emptyArray)}/>
 
         <AddShare symbolInfo={symbolInfo} shareInfo={shareInfo} postShareObject={postShareObject} updateShareInfo={share => setShareInfo(share)}/>
       </section>

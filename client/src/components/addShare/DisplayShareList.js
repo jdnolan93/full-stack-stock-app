@@ -2,12 +2,12 @@ import React from 'react';
 import DisplayShare from './DisplayShare';
 import './AddShare.css'
 
-const DisplayShareList = ({shareSearchArray, getInfo, updateShareInfo}) => {
+const DisplayShareList = ({shareSearchArray, getInfo, updateShareInfo, clearArray}) => {
 
    const displayShareList = shareSearchArray.map(share => <DisplayShare getInfo={getInfo} share={share} updateShareInfo={updateShareInfo} key={share['1. symbol']} />);
 
    const handleClick = () => {
-    return
+    clearArray([])
    }
     
   return (
