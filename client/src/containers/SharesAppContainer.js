@@ -1,10 +1,13 @@
 import React from 'react';
+import SharesGrid from '../components/SharesGrid';
 import getApiKey from '../key';
 
 const apiKey = getApiKey()
 
 const SharesAppContainer = () => {
-  return <div></div>;
+  return <div>
+    <SharesGrid/>
+  </div>;
 };
 
 export default SharesAppContainer;
