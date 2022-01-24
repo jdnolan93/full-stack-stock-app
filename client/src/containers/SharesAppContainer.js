@@ -9,8 +9,11 @@ import {postShare} from '../SharesService';
 
 
 
-const SharesAppContainer = () => {
 
+
+
+
+const SharesAppContainer = () => {
   const apiKey = getApiKey();
 
   const addNewShare = (newShare) => {
@@ -24,19 +27,17 @@ const SharesAppContainer = () => {
 
 // const apiKey = getApiKey()
 
-const SharesAppContainer = () => {
 
-
-  return <div>
+  return (<div>
     <TotalValueContainer />
     <SharesGrid/>
     <ShareDetails /> 
     <AddShareContainer apiKey={apiKey} postShareObject={newShare => addNewShare(newShare)} />
 
           
-  </div>;
+  </div>)
 
 };
-}
+
 
 export default SharesAppContainer;
