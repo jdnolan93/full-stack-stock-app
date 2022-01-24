@@ -1,10 +1,25 @@
 import React, { useState } from 'react';
+import ReactTooltip from "react-tooltip";
+import './AddShare.css';
+
 
 const AddShare = ({symbolInfo, shareInfo, postShareObject}) => {
 
   const isArrayEmpty = Object.keys(symbolInfo).length === 0 && symbolInfo.constructor === Object;
 
-  let display =  isArrayEmpty ? "You've not chosen any shares to add yet" : `${shareInfo['2. name']}  (${symbolInfo['01. symbol']})  ${symbolInfo['05. price']}p` 
+  const display =  isArrayEmpty ? "You've not chosen any shares to add yet" : `${shareInfo['2. name']}  (${symbolInfo['01. symbol']})  ${symbolInfo['05. price']}p` 
+
+  const moreInfo = () => {
+
+    if(!isArrayEmpty) {
+      return  <>
+      <span data-tip data-for="moreInfo" className='info'>i</span>
+      <ReactTooltip id="moreInfo">
+        <span>Price: {symbolInfo['05. price']}p<br/> Open: {symbolInfo['02. open']}p<br/> High: {symbolInfo['03. high']}p<br/>Low: {symbolInfo['04. low']}p<br/></span>
+      </ReactTooltip>
+      </>
+    }
+  }
 
   const [noOfShares, setNoOfShares] = useState("");
 
@@ -22,9 +37,6 @@ const AddShare = ({symbolInfo, shareInfo, postShareObject}) => {
       } 
       postShareObject(shareObject);     
     }
-
-    const success = document.querySelector('.display');
-    success.textContent = "Added!"
     
     setNoOfShares("");
   }
@@ -32,9 +44,9 @@ const AddShare = ({symbolInfo, shareInfo, postShareObject}) => {
   return (
     <div className='add-share-container'>
       <h2>I am the Add Share component</h2>
-      <p className='display'>
-      {display}
-      </p> 
+      <div className='display'>
+      {display} &nbsp; {moreInfo()}
+      </div> 
       <form onSubmit={handleOnSubmit}> 
         <input type="number" min="1" placeholder='No. of shares' onChange={handleOnChange} value={noOfShares} required/>
         <input type="submit" value="Add to portfolio"/>

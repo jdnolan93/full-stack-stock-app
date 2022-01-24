@@ -7,8 +7,7 @@ const DisplayShareList = ({shareSearchArray, getInfo, updateShareInfo}) => {
    const displayShareList = shareSearchArray.map(share => <DisplayShare getInfo={getInfo} share={share} updateShareInfo={updateShareInfo} key={share['1. symbol']} />);
 
    const handleClick = () => {
-    const success = document.querySelector('.display-list');
-    success.textContent = ""
+    return
    }
     
   return (
@@ -19,7 +18,7 @@ const DisplayShareList = ({shareSearchArray, getInfo, updateShareInfo}) => {
             {displayShareList}
         </ul>
         <div className='clear-list'>
-            <button className='clear-list' onClick={handleClick}>Clear List</button>
+            <button onClick={handleClick}>Clear List</button>
         </div>
     </div>
     );
