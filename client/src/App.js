@@ -16,7 +16,7 @@ function App() {
     })
   }, []);
   return (
-    <SharesGrid shares = {shares} />
+    <SharesGrid/>
   );
 }
 
