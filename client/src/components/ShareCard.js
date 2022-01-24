@@ -13,6 +13,7 @@ const ShareCard = ({share, removeShare}) => {
       <p> {share.noOfShares}</p>
       <p> {share.symbol} </p>
       <button onClick={handleDelete}><i className="fas fa-trash"></i></button>
+      <button onClick> <i className="fas fa-edit"></i> </button>
   </ul>;
 };
 
