@@ -10,7 +10,7 @@ const SharesAppContainer = ({shares}) => {
   return (
   <div>
     <TotalValueContainer />
-    <SharesGrid shares={shares}/ >
+    <SharesGrid shares={shares} />
     <ShareDetails /> 
   </div>
   );
