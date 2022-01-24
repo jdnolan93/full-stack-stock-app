@@ -14,6 +14,15 @@ function App() {
       setShares(allShares);
     })
   }, []);
+
+  const removeShare = (id) => {
+    const temp = shares.map(s => s);
+    const indexToDel = temp.map(s => s._id).indexOf(id);
+    
+    temp.splice(indexToDel, 1);
+    setShares(temp)
+  }
+
   return (
     <>
     <SharesGrid shares={shares}/>
