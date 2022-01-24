@@ -25,8 +25,8 @@ function App() {
 
   return (
     <>
-    <SharesGrid shares={shares}/>
-    <SharesAppContainer />
+
+    <SharesAppContainer shares={shares} />
     </>
   );
 }
