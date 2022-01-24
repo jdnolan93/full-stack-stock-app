@@ -1,8 +1,8 @@
-// import { ShareCard } from "./ShareCard";
-import ShareCard from "./ShareCard"
+import React from "react";
+import ShareCard from "./ShareCard";
 
 const SharesGrid = ({shares}) => {
-  const sharesList = shares.map((share) => {
+  const sharesList = shares.map(share => {
   return <ShareCard share={share} key={share._id}/>
 })
 
@@ -10,8 +10,8 @@ const SharesGrid = ({shares}) => {
     <>
         {sharesList}
     </>
-  )
-  }
+  );
+};
 
 export default SharesGrid
 

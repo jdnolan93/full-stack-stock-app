@@ -1,14 +1,12 @@
-import { useState, useEffect } from 'react';
-
+import React, { useState, useEffect } from 'react';
 import './App.css';
-
 import SharesAppContainer from './containers/SharesAppContainer';
 import SharesGrid from './components/SharesGrid';
 import {getShares} from './SharesService';
 
 function App() {
 
-  const [setShares] = useState([]);
+  const [shares, setShares] = useState([]);
 
   useEffect(()=>{
     getShares().then((allShares) => {
@@ -16,7 +14,7 @@ function App() {
     })
   }, []);
   return (
-    <SharesGrid/>
+    <SharesGrid shares={shares}/>
   );
 }
 

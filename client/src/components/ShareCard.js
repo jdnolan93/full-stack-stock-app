@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import React from 'react';
 import SharesAppContainer from '../containers/SharesAppContainer';
 
-const ShareCard = ({shares}) => {
-  return <> 
-      <h1> {shares.name} </h1>
-      <p> {shares.noOfShares}</p>
-      <p> {shares.symbol} </p>
-  </>;
+const ShareCard = ({share}) => {
+  return <ul> 
+      <h1> {share.name} </h1>
+      <p> {share.noOfShares}</p>
+      <p> {share.symbol} </p>
+  </ul>;
 };
 
-export default ShareCard
+export default ShareCard;
