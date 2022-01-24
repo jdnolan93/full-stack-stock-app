@@ -16272,7 +16272,7 @@ db.sharesData.insertMany(
                 }
         },
         {
-            name: 'APPL',
+            name: 'AAPL',
             data: {
                 "2022-01-21": {
                 "1. open": "171.5100",
@@ -24387,7 +24387,7 @@ db.sharesData.insertMany(
                 "4. close": "90.6200",
                 "5. volume": "25776200"
                 }
-                }
+            }
                 
         },
         {

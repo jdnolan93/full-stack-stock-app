@@ -17,7 +17,6 @@ const TotalValueContainer = () => {
     getShares().then((data) => setShareObjects(data));
   }, []);
 
-  console.log(shareObjects);
 
   const getSharePrice = (symbol) => {
     const apiKey = "LRR6RICZA3EIW3I0";
@@ -34,7 +33,7 @@ const TotalValueContainer = () => {
     }
     
 
-  console.log(temp);
+
   // console.log(sharePrice);
   return (
     <div>
