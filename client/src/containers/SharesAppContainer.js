@@ -1,12 +1,19 @@
+
+import TotalValueContainer from "./TotalValueContainer";
 import React from 'react';
 import SharesGrid from '../components/SharesGrid';
 import getApiKey from '../key';
 
-const apiKey = getApiKey()
+
+
+// const apiKey = getApiKey()
 
 const SharesAppContainer = () => {
+
   return <div>
+    <TotalValueContainer />
     <SharesGrid/>
+          
   </div>;
 };
 
