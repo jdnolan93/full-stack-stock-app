@@ -5,7 +5,7 @@ const CurrentValuePortfolioChart = ({ shareObject }) => {
   return (
     <div>
      
-      <Container style={{ fontSize: "10px" }}>
+      <Container style={{ fontSize: "10px",color:"red"}}>
         <Row>
           <Col>{shareObject.name}</Col>
           <Col>{shareObject.symbol}</Col>
