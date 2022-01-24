@@ -9,13 +9,19 @@ db.shares.insertMany([
         noOfShares: 50
     },
     {
-        name: 'Facebook',
-        symbol: 'FB',
+        name: 'IBM',
+        symbol: 'IBM',
         noOfShares: 40
     },
     {
-        name: 'CodeClan',
-        symbol: 'CCFTW',
+        name: 'Apple',
+        symbol: 'AAPL',
+        noOfShares: 50
+    },
+    {
+        name: 'Apple',
+        symbol: 'AAPL',
         noOfShares: 50
     }
+
 ]);

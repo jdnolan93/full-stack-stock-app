@@ -1,7 +1,12 @@
+
+import TotalValueContainer from "./TotalValueContainer";
 import React from 'react';
+import ShareDetails from '../components/ShareDetails';
+import SharesGrid from '../components/SharesGrid';
 import getApiKey from '../key';
 import AddShareContainer from './AddShareContainer';
 import {postShare} from '../SharesService';
+
 
 
 const SharesAppContainer = () => {
@@ -13,9 +18,25 @@ const SharesAppContainer = () => {
     // .then(newShareObject => setWhateverWeNameListOfShares([...WwateverWeNameListOfShares, newShareObject]));
       }
 
-  return (
+  
+
+
+
+// const apiKey = getApiKey()
+
+const SharesAppContainer = () => {
+
+
+  return <div>
+    <TotalValueContainer />
+    <SharesGrid/>
+    <ShareDetails /> 
     <AddShareContainer apiKey={apiKey} postShareObject={newShare => addNewShare(newShare)} />
-  );
+
+          
+  </div>;
+
 };
+}
 
 export default SharesAppContainer;
