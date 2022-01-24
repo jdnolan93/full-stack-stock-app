@@ -14,11 +14,10 @@ const AddShare = ({symbolInfo, shareInfo, postShareObject, updateShareInfo}) => 
   const moreInfo = () => {
 
     if(!isArrayEmpty) {
-      return  <>
+      return <>
       <span data-tip data-for="moreInfo" className='info'>i</span>
       <ReactTooltip id="moreInfo">
-        <span>Price: {symbolInfo['05. price']}p<br/> Open: {symbolInfo['02. open']}p<br/> High: {symbolInfo['03. high']}p<br/>Low: {symbolInfo['04. low']}p<br/>Volume: {symbolInfo['06. volume']}<br/>Latest trading day: {symbolInfo['07. latest trading day']}<br/>Previous close: {symbolInfo['08. previous close']}<br/>Change: {symbolInfo['09. change']}<br/>Change percent: {symbolInfo['10. change percent']}<br/>Type: {shareInfo['3. type']}<br/>Region: {shareInfo['4. region']}<br/>Currency{shareInfo['8. currency']}</span>
-      </ReactTooltip>
+        <span>Price: {symbolInfo['05. price']}p<br/> Open: {symbolInfo['02. open']}p<br/> High: {symbolInfo['03. high']}p<br/>Low: {symbolInfo['04. low']}p<br/>Volume: {symbolInfo['06. volume']}<br/>Latest trading day: {symbolInfo['07. latest trading day']}<br/>Previous close: {symbolInfo['08. previous close']}<br/>Change: {symbolInfo['09. change']}<br/>Change percent: {symbolInfo['10. change percent']}<br/>Type: {shareInfo['3. type']}<br/>Region: {shareInfo['4. region']}<br/>Currency{shareInfo['8. currency']}</span></ReactTooltip>
       </>
     }
   }
@@ -30,7 +29,6 @@ const AddShare = ({symbolInfo, shareInfo, postShareObject, updateShareInfo}) => 
   const handleOnSubmit = (event) => {
 
     event.preventDefault();
-
 
     if(!isArrayEmpty) {
 
@@ -57,14 +55,12 @@ const AddShare = ({symbolInfo, shareInfo, postShareObject, updateShareInfo}) => 
       draggable: true,
       progress: undefined,
       });
-
   }
 
   return (
     <div className='add-share-container'>
-
       <div className='display'>
-      {display} &nbsp; {moreInfo()} 
+        {display} &nbsp; {moreInfo()} 
       </div> 
       <form onSubmit={handleOnSubmit}> 
         <input type="number" min="1" placeholder='No. of shares' onChange={handleOnChange} value={noOfShares} required/>

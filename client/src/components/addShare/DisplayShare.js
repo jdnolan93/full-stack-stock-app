@@ -6,8 +6,6 @@ const DisplayShare = ({share, getInfo, updateShareInfo}) => {
         getInfo(share['1. symbol']);
         updateShareInfo(share);
     };
-
-    // console.log(share)
     
     return (
         <li>

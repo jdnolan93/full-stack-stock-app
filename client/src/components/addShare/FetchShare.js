@@ -27,5 +27,4 @@ const FetchShare = ({getInfo, updateShareInfo, getArray, shareSearchArray, clear
       </div>
   )};
 
-
 export default FetchShare;

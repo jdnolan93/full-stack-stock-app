@@ -16,5 +16,4 @@ const SharesAppContainer = ({shares}) => {
   );
 }
 
-
 export default SharesAppContainer;
