@@ -89,7 +89,7 @@ const ShareDetails = () => {
 
     const chartFunc = () => {
     if (loading) {
-        return <h2>Page is still loading</h2>
+        return <h2>Page is still loading, please wait</h2>
     }
     return <ChartDesign selectedShare={chartHeadline} shareData={shareData}/>
     }
