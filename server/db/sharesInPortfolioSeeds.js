@@ -17,5 +17,11 @@ db.shares.insertMany([
         name: 'Apple',
         symbol: 'AAPL',
         noOfShares: 50
+    },
+    {
+        name: 'Apple',
+        symbol: 'AAPL',
+        noOfShares: 50
     }
+
 ]);

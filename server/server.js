@@ -13,6 +13,10 @@ MongoClient.connect('mongodb://127.0.0.1:27017', { useUnifiedTopology: true })
     const sharesCollection = db.collection('shares');
     const sharesRouter = createRouter(sharesCollection);
     app.use('/api/shares', sharesRouter);
+    //second route
+    const shares_testCollection = db.collection('shares_test');
+    const shares_testRouter = createRouter(shares_testCollection);
+    app.use('/api/shares_test', shares_testRouter);
   })
   .catch(console.err);
 
