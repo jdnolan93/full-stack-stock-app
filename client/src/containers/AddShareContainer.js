@@ -35,7 +35,7 @@ const AddShareContainer = ({apiKey, postShareObject}) => {
 
         <FetchShare getInfo={symbol => getSymbolInfo(symbol)} updateShareInfo={share => setShareInfo(share)} getArray={keywords => getShareSearchArray(keywords)} shareSearchArray={shareSearchArray}/>
 
-        <AddShare symbolInfo={symbolInfo} shareInfo={shareInfo} postShareObject={postShareObject}/>
+        <AddShare symbolInfo={symbolInfo} shareInfo={shareInfo} postShareObject={postShareObject} updateShareInfo={share => setShareInfo(share)}/>
       </section>
     );
 };

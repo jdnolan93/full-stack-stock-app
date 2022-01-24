@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactTooltip from "react-tooltip";
 import './AddShare.css';
 
 
-const AddShare = ({symbolInfo, shareInfo, postShareObject}) => {
+const AddShare = ({symbolInfo, shareInfo, postShareObject, updateShareInfo}) => {
 
-  const isArrayEmpty = Object.keys(symbolInfo).length === 0 && symbolInfo.constructor === Object;
+  const isArrayEmpty = Object.keys(shareInfo).length === 0 && shareInfo.constructor === Object;
 
   const display =  isArrayEmpty ? "You've not chosen any shares to add yet" : `${shareInfo['2. name']}  (${symbolInfo['01. symbol']})  ${symbolInfo['05. price']}p` 
 
@@ -30,13 +30,21 @@ const AddShare = ({symbolInfo, shareInfo, postShareObject}) => {
     event.preventDefault();
 
     if(!isArrayEmpty) {
+
       const shareObject = {
         name: shareInfo['2. name'],
         symbol: shareInfo['1. symbol'],
         noOfShares: Number(noOfShares)
       } 
-      postShareObject(shareObject);     
+      postShareObject(shareObject);  
+      
+      // const priceObject = {
+      //   symbol: shareInfo['1. symbol'],
+      //   price: symbolInfo['05. price']
+      // }
     }
+
+    updateShareInfo({});
     
     setNoOfShares("");
   }
