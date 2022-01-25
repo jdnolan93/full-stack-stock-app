@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 const ShareUpdateNumber = ({share, updateShareNo, setShowForm}) => {
 
-    const [noOfShares, setNoOfShares] = useState(0)
+    const [sharesNumber, setSharesNumber] = useState(share.noOfShares)
 
-    const onChange = (e) => setNoOfShares(e.target.value)
+    const onChange = (e) => setSharesNumber(e.target.value)
 
     const onSubmit = (e) =>{
 
@@ -13,13 +13,13 @@ const ShareUpdateNumber = ({share, updateShareNo, setShowForm}) => {
         const payload = {
             "name": share.name,
             "symbol": share.symbol,
-            "noOfShares": Number(noOfShares),
+            "noOfShares": Number(sharesNumber),
             "currentPrice": Number(share.currentPrice)
             }
         
         updateShareNo(share._id, payload);
 
-        setNoOfShares(0);
+        setSharesNumber(share.noOfShares);
 
         setShowForm(false);
     }
@@ -28,7 +28,7 @@ const ShareUpdateNumber = ({share, updateShareNo, setShowForm}) => {
         <form onSubmit={onSubmit} id="update-number">
             <div className="updateFormWrap">
                 <label htmlFor="noOfShares"></label>
-                <input onChange={onChange} type="number" id="noOfShares"  />
+                <input onChange={onChange} type="number" id="noOfShares" value={sharesNumber} />
             </div>
             <input type="submit" value="Update" id="save"/>
         </form>
