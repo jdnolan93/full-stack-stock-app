@@ -25,7 +25,6 @@ function App() {
 
   return (
     <>
-
     <SharesAppContainer shares={shares} />
     </>
   );

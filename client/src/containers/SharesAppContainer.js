@@ -5,6 +5,7 @@ import ShareDetails from '../components/ShareDetails';
 import SharesGrid from '../components/SharesGrid';
 import Header from "../components/Header";
 import getApiKey from '../key';
+import '../App.css';
 
 
 
@@ -13,12 +14,12 @@ import getApiKey from '../key';
 const SharesAppContainer = () => {
 
 
-  return <div>
-    <Header/>
-    <TotalValueContainer />
-    <SharesGrid/>
-    <ShareDetails /> 
-
+  return <div class="container">
+    <Header class="top-header"/>
+    <TotalValueContainer class="total-value"/>
+    <SharesGrid class = "sidebar"/>
+    <ShareDetails class = "main-1" /> 
+    <ShareDetails class = "main-2" />
           
   </div>;
 };
