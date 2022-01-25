@@ -36,7 +36,7 @@ const AddShare = ({symbolInfo, shareInfo, postShareObject, updateShareInfo}) => 
         name: shareInfo['2. name'],
         symbol: shareInfo['1. symbol'],
         noOfShares: Number(noOfShares),
-        price: symbolInfo['05. price']
+        currentPrice: Number(symbolInfo['05. price'])
       } 
 
       postShareObject(shareObject);        

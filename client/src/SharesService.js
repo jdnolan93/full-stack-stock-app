@@ -31,6 +31,6 @@ export const updateShare = (id, payload) => {
         body: JSON.stringify(payload),
         headers: { 'Content-Type': 'application/json' }
     })
-    .then(res => res.json())
+    // .then(res => res.json())
 }
 
