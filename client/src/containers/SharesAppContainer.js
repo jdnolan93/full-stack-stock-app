@@ -15,11 +15,11 @@ const SharesAppContainer = () => {
 
 
   return <div class="container">
-    <Header class="top-header"/>
-    <TotalValueContainer class="total-value"/>
-    <SharesGrid class = "sidebar"/>
-    <ShareDetails class = "main-1" /> 
-    <ShareDetails class = "main-2" />
+    <Header className="top-header"/>
+    <TotalValueContainer className="total-value"/>
+    <SharesGrid className = "sidebar"/>
+    <ShareDetails className = "main-1" /> 
+    
           
   </div>;
 };
