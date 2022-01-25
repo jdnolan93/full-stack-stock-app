@@ -3,9 +3,7 @@ import React from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
-
 const CurrentValuePortfolioChart = ({ shareObjects }) => {
-
   const shareName = shareObjects.map((s) => s.name);
   const noOfShare = shareObjects.map((s) => s.noOfShares);
   const currentPrice = shareObjects.map((s) => s.currentPrice);
@@ -22,15 +20,13 @@ const CurrentValuePortfolioChart = ({ shareObjects }) => {
     arr.push({ name: shareName[i], y: percent[i] });
   }
 
-
   // console.log(arr);
-
-  console.log(shareName);
-  console.log(noOfShare);
-  console.log(currentPrice);
-  console.log(totalValue);
-  console.log(percent);
-  console.log(shareObjects.length);
+  // console.log(shareName);
+  // console.log(noOfShare);
+  // console.log(currentPrice);
+  // console.log(totalValue);
+  // console.log(percent);
+  // console.log(shareObjects.length);
 
   //options object
   const options = {
@@ -76,20 +72,15 @@ const CurrentValuePortfolioChart = ({ shareObjects }) => {
       {
         name: "Shares",
         colorByPoint: true,
-        data: arr
+        data: arr,
       },
     ],
   };
- 
-
 
   console.log(options.series[0].data);
 
   return (
     <div>
-       <h2>total value</h2>
-       {totalValue}
-
       <h2>Highcharts</h2>
       <HighchartsReact highcharts={Highcharts} options={options} />
     </div>

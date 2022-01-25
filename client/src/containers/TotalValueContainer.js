@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import TotalValue from "../components/TotalValue";
 import CurrentValuePortfolioChart from "../components/CurrentValuePortfolioChart";
 import { getShares } from "../SharesService";
 // import getApiKey from "../../key";
@@ -40,7 +40,7 @@ const TotalValueContainer = () => {
       <h1>this total value container</h1>
       <hr />
       <div>
-        {/* <TotalValue shareObjects={shareObjects}/> */}
+        <TotalValue shareObjects={shareObjects}/>
         <CurrentValuePortfolioChart shareObjects={shareObjects} />
       </div>
     </div>
