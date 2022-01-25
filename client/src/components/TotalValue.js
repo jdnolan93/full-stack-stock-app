@@ -1,9 +1,9 @@
 import React from 'react';
 
-const TotalValue = ({ shareObjects }) => {
+const TotalValue = ({ shares }) => {
 
-  const noOfShare = shareObjects.map((s) => s.noOfShares);
-  const currentPrice = shareObjects.map((s) => s.currentPrice);
+  const noOfShare = shares.map((s) => s.noOfShares);
+  const currentPrice = shares.map((s) => s.currentPrice);
   const totalValue = noOfShare.reduce(function (r, a, i) {
     return r + a * currentPrice[i];
   }, 0);

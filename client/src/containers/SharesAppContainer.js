@@ -17,7 +17,7 @@ const SharesAppContainer = ({removeShareFromDB, shares}) => {
 
   return <div className="container">
     <Header className="top-header"/>
-    <TotalValueContainer className="total-value"/>
+    <TotalValueContainer className="total-value" shares={shares}/>
     <SharesGrid className = "sidebar" removeShareFromDB={removeShareFromDB} shares={shares}/>
     <ShareDetails className = "main-1" /> 
     

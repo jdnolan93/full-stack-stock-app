@@ -3,20 +3,20 @@ import React from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
-const CurrentValuePortfolioChart = ({ shareObjects }) => {
-  const shareName = shareObjects.map((s) => s.name);
-  const noOfShare = shareObjects.map((s) => s.noOfShares);
-  const currentPrice = shareObjects.map((s) => s.currentPrice);
+const CurrentValuePortfolioChart = ({ shares }) => {
+  const shareName = shares.map((s) => s.name);
+  const noOfShare = shares.map((s) => s.noOfShares);
+  const currentPrice = shares.map((s) => s.currentPrice);
 
   const totalValue = noOfShare.reduce(function (r, a, i) {
     return r + a * currentPrice[i];
   }, 0);
-  const percent = shareObjects.map(
+  const percent = shares.map(
     (s) => (s.noOfShares * s.currentPrice * 100) / totalValue
   );
 
   const arr = [];
-  for (let i = 0; i < shareObjects.length; i++) {
+  for (let i = 0; i < shares.length; i++) {
     arr.push({ name: shareName[i], y: percent[i] });
   }
 
