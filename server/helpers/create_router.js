@@ -31,6 +31,24 @@ const createRouter = function (collection) {
 
   });
 
+
+router.get('/find/:name', (req, res) => {
+  const inputName = req.params.name
+  collection
+    .findOne({ name: inputName})
+    .then((doc) => res.json(doc))
+    .catch((err) => {
+      console.error(err)
+      res.status(500)
+      res.json({status:500, error:err})
+    })
+
+});
+
+
+
+
+
   router.post('/', (req, res) => {
     const newData = req.body;
     collection

@@ -4,6 +4,8 @@ const MongoClient = require('mongodb').MongoClient
 const createRouter = require('./helpers/create_router.js')
 const cors = require('cors');
 
+
+
 app.use(express.json());
 app.use(cors());
 
@@ -14,9 +16,9 @@ MongoClient.connect('mongodb://127.0.0.1:27017', { useUnifiedTopology: true })
     const sharesRouter = createRouter(sharesCollection);
     app.use('/api/shares', sharesRouter);
     //second route
-    const shares_testCollection = db.collection('shares_test');
-    const shares_testRouter = createRouter(shares_testCollection);
-    app.use('/api/shares_test', shares_testRouter);
+    const sharesDataCollection = db.collection('sharesData');
+    const sharesDataRouter = createRouter(sharesDataCollection);
+    app.use('/api/sharesData', sharesDataRouter);
   })
   .catch(console.err);
 

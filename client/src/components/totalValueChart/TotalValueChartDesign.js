@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import { render } from "react-dom";
 import HighStock from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
-import chartData from "./ChartData";
 
 
-const ChartDesign = ({selectedShare, shareData}) => {
 
-const mockData = shareData
+const TotalValueChartDesign = () => {
+
+const mockData = []
 
 
 let mockOptions = {
@@ -44,7 +44,7 @@ let mockOptions = {
   },
 
   title: {
-    text: selectedShare
+    text: "Total value of the fund"
   },
 
   yAxis: [
@@ -132,4 +132,4 @@ let mockOptions = {
   );
 }
 
-export default ChartDesign
+export default TotalValueChartDesign

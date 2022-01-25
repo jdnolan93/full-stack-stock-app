@@ -3,6 +3,7 @@ import TotalValueContainer from "./TotalValueContainer";
 import React from 'react';
 import ShareDetails from '../components/ShareDetails';
 import SharesGrid from '../components/SharesGrid';
+
 import Header from "../components/Header";
 import getApiKey from '../key';
 import '../App.css';
@@ -23,5 +24,6 @@ const SharesAppContainer = ({removeShareFromDB, shares}) => {
           
   </div>;
 };
+
 
 export default SharesAppContainer;

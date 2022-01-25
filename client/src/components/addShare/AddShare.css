@@ -1,0 +1,78 @@
+#add-share-container {
+  border: solid 1px lightgrey;
+  border-radius: 5%;
+  width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 3rem;
+}
+
+.fetch-shares-container {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.display-share-list-container {
+  border: solid 1px lightgrey;
+  border-radius: 5%;
+  margin: 2rem;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  text-align: justify;
+}
+
+.add-share-container {
+  border: solid 1px lightgrey;
+  border-radius: 5%;
+  margin: 2rem;
+  padding-left: 2rem;
+  padding-top: 2rem;
+
+  padding-bottom: 2rem;
+}
+
+.clear-list {
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+  text-align: right;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+.info {
+  box-shadow: 2px 2px grey;
+  background-color: lightgrey;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: bolder;
+  border: solid 1px grey;
+  border-radius: 33%;
+  padding: 0.15rem;
+  cursor: pointer;
+}
+
+.display {
+  margin-bottom: 1rem;
+}
+
+.redHover:hover {
+  color: indianred;
+  cursor: pointer;
+  position: relative;
+  right: -1px;
+  top: -1px;
+  height: auto;
+  display: block;
+  z-index: 999;
+}

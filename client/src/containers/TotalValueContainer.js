@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import TotalValue from "../components/TotalValue";
+
 import CurrentValuePortfolioChart from "../components/CurrentValuePortfolioChart";
 import { getShares } from "../SharesService";
 // import getApiKey from "../../key";
@@ -17,10 +17,10 @@ const TotalValueContainer = () => {
     getShares().then((data) => setShareObjects(data));
   }, []);
 
-  
+
 
   const getSharePrice = (symbol) => {
-    const apiKey = "LRR6RICZA3EIW3I0";
+    const apiKey = "";
     const url = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=${apiKey}`;
 
     fetch(url)
@@ -34,17 +34,15 @@ const TotalValueContainer = () => {
     }
     
 
-  
-  // console.log(sharePrice);
+
   return (
     <div>
       <h1>this total value container</h1>
       <hr />
       <div>
-        <TotalValue shareObjects={shareObjects}/>
+        {/* <TotalValue shareObjects={shareObjects}/> */}
+        <CurrentValuePortfolioChart shareObjects={shareObjects} />
       </div>
-
-     
     </div>
   );
 };
