@@ -1,16 +1,13 @@
-import SharesAppContainer from '../containers/SharesAppContainer';
-import { deleteShare } from '../SharesService';
 import ShareUpdateNumber from './ShareUpdateNumber';
 import { useState } from 'react';
 
-const ShareCard = ({share, removeShareFromDB}) => {
+const ShareCard = ({share, removeShareFromDB, updateShareNo}) => {
   const [showForm, setShowForm] = useState(false)
 
   const handleDelete = () => removeShareFromDB(share._id);
   
-
   const handleEdit = () => {
-      setShowForm(true)
+      setShowForm(true);
   }
   if(showForm){
 
@@ -18,7 +15,7 @@ const ShareCard = ({share, removeShareFromDB}) => {
       <h1> {share.name} </h1>
       <p> {share.noOfShares}</p>
       <p> {share.symbol} </p>
-      <ShareUpdateNumber id = {share._id}/>
+      <ShareUpdateNumber share = {share} updateShareNo={updateShareNo}/>
       <button onClick={handleDelete}><i className="fas fa-trash"></i></button>
       <button onClick={handleEdit}> <i className="fas fa-edit"></i> </button>
   </ul>;

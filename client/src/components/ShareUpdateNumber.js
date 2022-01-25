@@ -1,8 +1,6 @@
-import { useState } from "react";
-import { updateShare } from "../SharesService";
+import React, { useState } from "react";
 
-
-const ShareUpdateNumber = (id) => {
+const ShareUpdateNumber = (share, updateShareNo) => {
 
     const [formData, setFormData] = useState({})
 
@@ -14,12 +12,14 @@ const ShareUpdateNumber = (id) => {
     const onSubmit = (e) =>{
         e.preventDefault();
         console.log(formData);
-        updateShare({id}, formData)
+        updateShareNo(share._id, formData)
         }
 
     return (
         <form onSubmit={onSubmit} id="update-number">
             <div className="updateFormWrap">
+                <input type="hidden" value={share.name}/>
+                <input type="hidden"  value={share.id}/>
                 <label htmlFor="noOfShares"></label>
                 <input onChange={onChange} type="number" id="noOfShares"  />
             </div>
