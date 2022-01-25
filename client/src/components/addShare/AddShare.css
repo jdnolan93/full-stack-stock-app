@@ -64,20 +64,12 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-.info {
-  box-shadow: 2px 2px grey;
-  background-color: lightgrey;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-style: italic;
-  font-weight: bolder;
-  border: solid 1px grey;
-  border-radius: 33%;
-  padding: 0.15rem;
-  cursor: pointer;
-}
-
 .display {
   margin-bottom: 1rem;
+}
+
+.info {
+  cursor: pointer;
 }
 
 .redHover:hover {
