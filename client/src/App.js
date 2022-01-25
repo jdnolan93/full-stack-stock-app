@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import SharesAppContainer from './containers/SharesAppContainer';
 import SharesGrid from './components/SharesGrid';
 import {getShares} from './SharesService';
+import TotalValueChart from './components/totalValueChart/TotalValueChart';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
     <>
     <SharesGrid shares={shares}/>
     <SharesAppContainer />
+    <TotalValueChart shares={shares}/>
     </>
   );
 }

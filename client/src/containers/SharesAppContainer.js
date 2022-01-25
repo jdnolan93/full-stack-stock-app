@@ -30,7 +30,7 @@ const SharesAppContainer = () => {
 
   return (<div>
     <TotalValueContainer />
-    <SharesGrid/>
+    {/* <SharesGrid/> */}
     <ShareDetails /> 
     <AddShareContainer apiKey={apiKey} postShareObject={newShare => addNewShare(newShare)} />
 
