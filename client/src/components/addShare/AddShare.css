@@ -1,7 +1,14 @@
-#add-share-container {
+#add-page-container {
+  border: solid 1px lightgrey;
+  width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.add-share-container {
   border: solid 1px lightgrey;
   border-radius: 5%;
-  width: 700px;
+  width: auto;
   margin-right: auto;
   margin-left: auto;
   margin-top: 3rem;
@@ -9,7 +16,6 @@
 
 .fetch-shares-container {
   text-align: center;
-  padding-top: 2rem;
 }
 
 .display-share-list-container {
@@ -17,7 +23,6 @@
   border-radius: 5%;
   margin: 2rem;
   padding-top: 2rem;
-  padding-left: 1rem;
   text-align: justify;
 }
 
@@ -25,10 +30,19 @@
   border: solid 1px lightgrey;
   border-radius: 5%;
   margin: 2rem;
-  padding-left: 2rem;
   padding-top: 2rem;
-
   padding-bottom: 2rem;
+  text-align: center;
+}
+
+.calculator-container {
+  border: solid 1px lightgrey;
+  border-radius: 5%;
+  margin: 2rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
 }
 
 .clear-list {
