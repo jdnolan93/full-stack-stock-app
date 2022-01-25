@@ -1,7 +1,7 @@
 #add-share-container {
   border: solid 1px lightgrey;
   border-radius: 5%;
-  width: 650px;
+  width: 700px;
   margin-right: auto;
   margin-left: auto;
   margin-top: 3rem;
@@ -9,12 +9,15 @@
 
 .fetch-shares-container {
   text-align: center;
+  padding-top: 2rem;
 }
 
 .display-share-list-container {
   border: solid 1px lightgrey;
   border-radius: 5%;
   margin: 2rem;
+  padding-top: 2rem;
+  padding-left: 1rem;
   text-align: justify;
 }
 
@@ -23,6 +26,8 @@
   border-radius: 5%;
   margin: 2rem;
   padding-left: 2rem;
+  padding-top: 2rem;
+
   padding-bottom: 2rem;
 }
 
@@ -59,4 +64,15 @@ input[type="submit"] {
 
 .display {
   margin-bottom: 1rem;
+}
+
+.redHover:hover {
+  color: indianred;
+  cursor: pointer;
+  position: relative;
+  right: -1px;
+  top: -1px;
+  height: auto;
+  display: block;
+  z-index: 999;
 }

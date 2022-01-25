@@ -19,7 +19,6 @@ const FetchShare = ({getInfo, updateShareInfo, getArray, shareSearchArray, clear
 
   return (
       <div className='fetch-shares-container'>
-      <h2>I am the fetch shares component</h2>
         <form onSubmit={handleOnSubmit}> 
             <input type="search" placeholder='Enter company or share symbol' value={keywords} onChange={handleTextChange} size="30" autoFocus required/>
             <input type="submit" value="Submit" />
@@ -27,6 +26,5 @@ const FetchShare = ({getInfo, updateShareInfo, getArray, shareSearchArray, clear
        <DisplayShareList getInfo={getInfo} shareSearchArray={shareSearchArray} updateShareInfo={updateShareInfo} clearArray={clearArray}/>
       </div>
   )};
-
 
 export default FetchShare;
