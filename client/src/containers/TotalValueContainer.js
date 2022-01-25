@@ -20,7 +20,7 @@ const TotalValueContainer = () => {
 
 
   const getSharePrice = (symbol) => {
-    const apiKey = "LRR6RICZA3EIW3I0";
+    const apiKey = "";
     const url = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=${apiKey}`;
 
     fetch(url)
@@ -33,6 +33,7 @@ const TotalValueContainer = () => {
       temp.push(sharePrice[a]["4. close"]);
     }
     
+
 
   return (
     <div>

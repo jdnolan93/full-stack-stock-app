@@ -3,10 +3,11 @@ import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import SharesAppContainer from './containers/SharesAppContainer';
 import AddShareContainer from './containers/AddShareContainer';
-import {getShares, postShare} from './SharesService';
+import {getShares, postShare, deleteShare} from './SharesService';
 import getApiKey from './key';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import NavBar from "./components/NavBar";
+
 
 
 
@@ -18,8 +19,14 @@ function App() {
   useEffect(()=>{
     getShares().then((allShares) => {
       setShares(allShares);
-    })
-  }, []);
+    }, [shares]);
+
+
+  const removeShare = (id) => {
+    deleteShare(id);
+    setShares(shares.filter(share => share._id !== id));
+  }
+
 
   const addNewShare = (newShare) => {
     postShare(newShare)
@@ -34,6 +41,7 @@ function App() {
         <Route path="/add" element={<AddShareContainer apiKey={apiKey} postShareObject={newShare => addNewShare(newShare)}/>} />
       </Routes>
     </Router>
+
 
   );
 }
