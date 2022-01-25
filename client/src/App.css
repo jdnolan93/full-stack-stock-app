@@ -16,7 +16,8 @@ body {
     "sidebar main-1 main-1"
     "sidebar main-2 main-2"
     "sidebar main-2 main-2"; 
-  height: 50%; 
+    justify-items: stretch; 
+    align-items: stretch; 
 }
 
 .top-header { 

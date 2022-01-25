@@ -25,3 +25,12 @@ export const getShare = (id) => {
       .then(res => res.json())
 }
 
+export const updateShare = (id, payload) => {
+    return fetch(baseURL + id, {
+        method: 'PUT',
+        body: JSON.stringify(payload),
+        headers: { 'Content-Type': 'application/json' }
+    })
+    .then(res => res.json())
+}
+
