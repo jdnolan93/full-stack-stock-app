@@ -24,7 +24,7 @@ const CalculatorForm = ({updateRate, updateGrowth, rate, growth}) => {
 
     const annualizedGrowth = (principal, rate, frequency, years) => principal * Math.pow(1 + rate / frequency, frequency * years)
 
-    const display = growth > 0 ? `Based on a principal of £${principal}, an assumed annual return of ${returns}% and an assumed annual inflation rate of ${inflation}% (giving a real rate of return of ${rate*100}%) - then the final value could be worth £${(Math.round(growth*100)/100).toLocaleString()} in ${years} years.` : "";
+    const display = growth > 0 ? `Based on a starting value of £${principal}, an assumed annual return of ${returns}% and an assumed annual inflation rate of ${inflation}% (giving a real rate of return of ${rate*100}%) - then the final value could be worth £${(Math.round(growth*100)/100).toLocaleString()} in ${years} years (in real terms).` : "";
 
     const handleOnSubmit = event => {
 
