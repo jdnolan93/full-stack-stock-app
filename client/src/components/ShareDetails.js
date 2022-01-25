@@ -12,12 +12,12 @@ const ShareDetails = () => {
     const apiKey = getApiKey()
     const [shares, setShares] = useState([])
     const [selectedShare, setSelectedShare] = useState("MSFT")
-    const [selectedTime, setSelectedTime] = useState ("DAILY")
+    // const [selectedTime, setSelectedTime] = useState ("DAILY")
     const [shareData, setShareData] = useState([])
     const [chartHeadline, setChartHeadline] = useState(selectedShare)
     const [loading, setLoading] = useState(true)
     
-    const getShareData = async (symbol, timeFrame) => {
+    const getShareData = async (symbol) => {
         setLoading(true)
 
         const convertDataForChart = (inputData) => {
@@ -34,22 +34,23 @@ const ShareDetails = () => {
           return sharesDataArr.reverse()
         }
 
-        const timeFrameURL = () => {
-            if (selectedTime === "DAILY") {
-                return "Time Series (Daily)"
-            }
-            else if (selectedTime === "WEEKLY") {
-                return "Weekly Time Series"
-            }
-            else if (selectedTime === "MONTHLY") {
-                return "Monthly Time Series"
-            }
-        }
-        const sharesApiURL = `https://www.alphavantage.co/query?function=TIME_SERIES_${timeFrame}&symbol=${symbol}&apikey=${apiKey}`
+        // const timeFrameURL = () => {
+        //     if (selectedTime === "DAILY") {
+        //         return "Time Series (Daily)"
+        //     }
+        //     else if (selectedTime === "WEEKLY") {
+        //         return "Weekly Time Series"
+        //     }
+        //     else if (selectedTime === "MONTHLY") {
+        //         return "Monthly Time Series"
+        //     }
+        // }
+        // const sharesApiURL = `https://www.alphavantage.co/query?function=TIME_SERIES_${timeFrame}&symbol=${symbol}&apikey=${apiKey}`
+        const sharesApiURL = `http://localhost:5000/api/sharesData/find/${symbol}`
         return fetch(sharesApiURL)
         .then(respose => respose.json())
         .then((data) => 
-            convertDataForChart(data[timeFrameURL()]), setLoading(false))
+            convertDataForChart(data["data"]), setLoading(false))
         .catch(err=>console.log(err))
         
         
@@ -58,7 +59,7 @@ const ShareDetails = () => {
         
     
     useEffect(() => {
-        getShareData(selectedShare, selectedTime).then((result) => setShareData(result))}
+        getShareData(selectedShare).then((result) => setShareData(result))}
         , []);
     
     useEffect(() => {
@@ -74,16 +75,17 @@ const ShareDetails = () => {
     })
     const onChange = (event) => {
         setSelectedShare(event.target.value)
+
     }
 
-    const onChangeTime = (event) => {
-        setSelectedTime(event.target.value)
-    }
+    // const onChangeTime = (event) => {
+    //     setSelectedTime(event.target.value)
+    // }
     
     const handleShareData = (event) => {
         event.preventDefault();
         setChartHeadline(selectedShare)
-        getShareData(selectedShare, selectedTime).then((result) => setShareData(result))
+        getShareData(selectedShare).then((result) => setShareData(result))
 
     }
 
@@ -104,13 +106,6 @@ const ShareDetails = () => {
                 {sharesNodes}
         </select>
         <br />
-        <label htmlFor="shares_drop_down">Choose a timeframe:</label>
-        <select id="shares_drop_down" onChange={onChangeTime}>
-        <option default disabled >Timeframe</option>
-        <option value="DAILY" >Daily</option>
-        <option value="WEEKLY">Weekly</option>
-        <option value="MONTHLY" >Monthly</option>
-        </select>
         <input type="submit" value="Select" />
         </form>
         <br />

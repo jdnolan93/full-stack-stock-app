@@ -11,6 +11,7 @@ const SharesAppContainer = ({shares}) => {
   <div>
     <TotalValueContainer />
     <SharesGrid shares={shares} />
+
     <ShareDetails /> 
   </div>
   );

@@ -8,6 +8,8 @@ import getApiKey from './key';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import NavBar from "./components/NavBar";
 
+
+
 function App() {
   const apiKey = getApiKey();
 
@@ -32,6 +34,7 @@ function App() {
         <Route path="/add" element={<AddShareContainer apiKey={apiKey} postShareObject={newShare => addNewShare(newShare)}/>} />
       </Routes>
     </Router>
+
   );
 }
 
