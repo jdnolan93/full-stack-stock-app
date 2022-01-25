@@ -15,7 +15,7 @@ import '../App.css';
 const SharesAppContainer = ({removeShareFromDB, shares}) => {
 
 
-  return <div className="container">
+  return <div className="grid">
     <Header className="top-header"/>
     <TotalValueContainer className="total-value" shares={shares}/>
     <SharesGrid className = "sidebar" removeShareFromDB={removeShareFromDB} shares={shares}/>

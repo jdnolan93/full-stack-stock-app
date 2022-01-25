@@ -15,7 +15,7 @@ const ShareCard = ({share, removeShareFromDB}) => {
   if(showForm){
 
   return <ul> 
-      <h1> {share.name} </h1>
+      <p> {share.name} </p>
       <p> {share.noOfShares}</p>
       <p> {share.symbol} </p>
       <ShareUpdateNumber id = {share._id}/>
@@ -26,8 +26,8 @@ const ShareCard = ({share, removeShareFromDB}) => {
 
   else{
     return (
-        <ul> 
-      <h1> {share.name} </h1>
+        <ul className='share-list'> 
+      <b> {share.name} </b>
       <p> {share.noOfShares}</p>
       <p> {share.symbol} </p>
       <button onClick={handleDelete}><i className="fas fa-trash"></i></button>

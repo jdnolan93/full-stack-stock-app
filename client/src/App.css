@@ -7,32 +7,29 @@ body {
 
 .container {
   display: grid; 
-  grid-template-columns: 0.8fr 1.2fr 1fr; 
-  grid-template-rows: 0.4fr 1.6fr 0.7fr 1.3fr 1fr; 
-  gap: 10px 10px; 
+  grid-template-columns: 200px 300px 300px; 
+  grid-template-rows: 100px 170px 100px 170px 100px; 
+  gap: 5px 5px; 
   grid-template-areas: 
     "top-header top-header top-header"
     "total-value main-1 main-1"
     "sidebar main-1 main-1"
     "sidebar main-2 main-2"
     "sidebar main-2 main-2"; 
-    justify-items: stretch; 
-    align-items: stretch; 
+  justify-content: space-evenly; 
+  align-content: space-around; 
+  justify-items: stretch; 
+  align-items: stretch; 
+  height: 50%; 
 }
 
-.top-header { 
-  grid-area: top-header; 
-}
-.total-value { 
-  grid-area: total-value; 
-}
-.sidebar { 
-  grid-area: sidebar; 
-}
+.top-header { grid-area: top-header; }
+.total-value { grid-area: total-value; }
+.sidebar { grid-area: sidebar; }
+.main-1 { grid-area: main-1; }
+.main-2 { grid-area: main-2; }
 
-.main-1 { 
-  grid-area: main-1; 
-}
-.main-2 { 
-  grid-area: main-2; 
-}
+.header-nav-bar {
+display: flex;
+justify-content: space-evenly;
+};

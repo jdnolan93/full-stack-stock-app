@@ -22,7 +22,6 @@ const TotalValueContainer = ({shares}) => {
 
   return (
     <div>
-      <h1>this total value container</h1>
       <hr />
       <div>
         <TotalValue shares={shares}/>
