@@ -11,13 +11,13 @@ import '../App.css';
 
 // const apiKey = getApiKey()
 
-const SharesAppContainer = () => {
+const SharesAppContainer = ({removeShareFromDB, shares}) => {
 
 
-  return <div class="container">
+  return <div className="container">
     <Header className="top-header"/>
     <TotalValueContainer className="total-value"/>
-    <SharesGrid className = "sidebar"/>
+    <SharesGrid className = "sidebar" removeShareFromDB={removeShareFromDB} shares={shares}/>
     <ShareDetails className = "main-1" /> 
     
           

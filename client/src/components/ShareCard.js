@@ -3,13 +3,12 @@ import { deleteShare } from '../SharesService';
 import ShareUpdateNumber from './ShareUpdateNumber';
 import { useState } from 'react';
 
-const ShareCard = ({share, removeShare}) => {
+const ShareCard = ({share, removeShareFromDB}) => {
   const [showForm, setShowForm] = useState(false)
-  const handleDelete = () => {
-      deleteShare(share._id).then(()=>{
-          removeShare(share._id);
-      })
-  }
+
+  const handleDelete = () => removeShareFromDB(share._id);
+  
+
   const handleEdit = () => {
       setShowForm(true)
   }

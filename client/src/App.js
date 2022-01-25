@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import SharesAppContainer from './containers/SharesAppContainer';
-import {getShares} from './SharesService';
+import {getShares, deleteShare} from './SharesService';
 
 function App() {
 
@@ -12,19 +12,18 @@ function App() {
     getShares().then((allShares) => {
       setShares(allShares);
     })
-  }, []);
+  }, [shares]);
+
+
 
   const removeShare = (id) => {
-    const temp = shares.map(s => s);
-    const indexToDel = temp.map(s => s._id).indexOf(id);
-    
-    temp.splice(indexToDel, 1);
-    setShares(temp)
+    deleteShare(id);
+    setShares(shares.filter(share => share._id !== id));
   }
 
   return (
     <>
-    <SharesAppContainer shares={shares} />
+    <SharesAppContainer shares={shares} removeShareFromDB={id => removeShare(id)}/>
     </>
   );
 }
