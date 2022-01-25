@@ -20,13 +20,6 @@ const CurrentValuePortfolioChart = ({ shareObjects }) => {
     arr.push({ name: shareName[i], y: percent[i] });
   }
 
-  // console.log(arr);
-  // console.log(shareName);
-  // console.log(noOfShare);
-  // console.log(currentPrice);
-  // console.log(totalValue);
-  // console.log(percent);
-  // console.log(shareObjects.length);
 
   //options object
   const options = {
@@ -77,7 +70,6 @@ const CurrentValuePortfolioChart = ({ shareObjects }) => {
     ],
   };
 
-  console.log(options.series[0].data);
 
   return (
     <div>
