@@ -11,6 +11,9 @@ const NavBar = () => {
       <li>
         <Link to="/add"><button>Add Shares</button></Link>
       </li>
+      <li>
+        <Link to="/calculator"><button>Calculator</button></Link>
+      </li>
     </ul>
   );
 }
