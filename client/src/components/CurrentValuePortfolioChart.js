@@ -2,6 +2,7 @@ import React from "react";
 
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
+import ShareDetails from "./ShareDetails";
 
 const CurrentValuePortfolioChart = ({ shares }) => {
   const shareName = shares.map((s) => s.name);
@@ -73,6 +74,7 @@ const CurrentValuePortfolioChart = ({ shares }) => {
 
   return (
     <div>
+      <ShareDetails className = "main-1" /> 
       <HighchartsReact highcharts={Highcharts} options={options} />
     </div>
   );

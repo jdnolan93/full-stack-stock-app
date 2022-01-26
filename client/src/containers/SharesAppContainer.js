@@ -18,11 +18,14 @@ const SharesAppContainer = ({removeShareFromDB, shares}) => {
 
 
   return <div className="container">
-    <Header className="top-header"/>
-    <TotalValueContainer className="total-value" shares={shares}/>
-    <SharesGrid className = "sidebar" removeShareFromDB={removeShareFromDB} shares={shares}/>
-    <ShareDetails className = "main-1" /> 
-    <CurrentValuePortfolioChart shares={shares}/>
+        <div className="left" className="column">
+          <div className="top-right"><p>empty</p></div>
+          <SharesGrid className="bottom" removeShareFromDB={removeShareFromDB} shares={shares}/>
+        </div>
+        <div className="right" className="column">
+    <Header className="top-right"/>
+    <CurrentValuePortfolioChart className="bottom" shares={shares}/> 
+        </div>
   </div>
 };
 
