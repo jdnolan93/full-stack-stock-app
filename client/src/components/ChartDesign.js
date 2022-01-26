@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { render } from "react-dom";
 import HighStock from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
-import chartData from "./ChartData";
+import chartData from "./totalValueChart/ChartData";
+import "./totalValueChart/TotalValueChartDesign.css"
 
 
 const ChartDesign = ({selectedShare, shareData}) => {
@@ -120,6 +121,7 @@ let mockOptions = {
 
 
   return (
+
     <div>
       {
         <HighchartsReact

@@ -2,16 +2,24 @@ import React, { useState, useEffect } from "react";
 import { render } from "react-dom";
 import HighStock from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
+import chartData from "./ChartData";
 
 
 
-const TotalValueChartDesign = () => {
 
-const mockData = []
+const TotalValueChartDesign = ({totalShareData}) => {
+
+
+const mockData = totalShareData
 
 
 let mockOptions = {
-  rangeSelector: {buttons: [{
+  chart: {
+    styledMode: true
+},
+  rangeSelector: 
+  
+   {buttons: [{
     type: 'month',
     count: 1,
     text: '1m',
@@ -42,9 +50,14 @@ let mockOptions = {
 }], 
     selected: 5
   },
-
   title: {
     text: "Total value of the fund"
+  },
+  navigator: {
+    enabled:false
+  },
+  scrollbar: {
+    enabled: false
   },
 
   yAxis: [
@@ -56,25 +69,26 @@ let mockOptions = {
       title: {
         text: "Price"
       },
-      height: "60%",
+      height: "100%",
       lineWidth: 2,
       resize: {
         enabled: true
       }
     },
-    {
-      labels: {
-        align: "right",
-        x: -3
-      },
-      title: {
-        text: "Volume"
-      },
-      top: "65%",
-      height: "35%",
-      offset: 0,
-      lineWidth: 2
-    }
+    
+    // {
+    //   labels: {
+    //     align: "right",
+    //     x: -3
+    //   },
+    //   title: {
+    //     text: "Volume"
+    //   },
+    //   top: "65%",
+    //   height: "35%",
+    //   offset: 0,
+    //   lineWidth: 2
+    // }
   ],
 
   tooltip: {
@@ -83,37 +97,37 @@ let mockOptions = {
 
   series: [
     {
-      type: "candlestick",
+      type: "line",
       data: (function() {
         var ohlcData = [];
 
         for (var i = 0; i < mockData.length; i++) {
           ohlcData.push([
             mockData[i][0], // the date
-            mockData[i][1], // open
-            mockData[i][2], // high
-            mockData[i][3], // low
-            mockData[i][4] // close
+            // mockData[i][1]*10, // open
+            // mockData[i][2]*10, // high
+            // mockData[i][3]*10, // low
+            Math.floor(Number(mockData[i][4]))*100 // close
           ]);
         }
         return ohlcData;
       })()
     },
-    {
-      type: "column",
-      data: (function() {
-        var columnData = [];
+    // {
+    //   type: "line",
+    //   data: (function() {
+    //     var columnData = [];
 
-        for (var i = 0; i < mockData.length; i++) {
-          columnData.push([
-            mockData[i][0], // the date
-            mockData[i][5] // the volume
-          ]);
-        }
-        return columnData;
-      })(),
-      yAxis: 1
-    }
+    //     for (var i = 0; i < mockData.length; i++) {
+    //       columnData.push([
+    //         mockData[i][0], // the date
+    //         mockData[i][5] // the volume
+    //       ]);
+    //     }
+    //     return columnData;
+    //   })(),
+    //   yAxis: 1
+    // }
   ]
 };
 
