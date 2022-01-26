@@ -17,14 +17,14 @@ body {
 
 #add-page-container {
   width: auto;
-  margin-right: 36rem;
+  margin-right: 25%;
   margin-left: auto;
 }
 
 #current-container {
   width: auto;
   margin-right: auto;
-  margin-left: auto;
+  margin-left: 5%;
 }
 
 .add-container {
