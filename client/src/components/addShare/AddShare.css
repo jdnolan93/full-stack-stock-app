@@ -18,11 +18,11 @@ body {
 #add-page-container {
   width: auto;
   margin-right: 25%;
-  margin-left: auto;
+  margin-left: 5%;
 }
 
 #current-container {
-  width: auto;
+  width: 300px;
   margin-right: auto;
   margin-left: 5%;
 }
