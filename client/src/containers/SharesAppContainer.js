@@ -7,7 +7,7 @@ import SharesGrid from '../components/SharesGrid';
 import Header from "../components/Header";
 import getApiKey from '../key';
 import '../App.css';
-
+import NavBar from "../components/NavBar";
 import CurrentValuePortfolioChart from "../components/CurrentValuePortfolioChart";
 
 
@@ -23,7 +23,7 @@ const SharesAppContainer = ({removeShareFromDB, shares}) => {
           <SharesGrid className="bottom" removeShareFromDB={removeShareFromDB} shares={shares}/>
         </div>
         <div className="right" className="column">
-    <Header className="top-right"/>
+    <NavBar className="top-right"/>
     <CurrentValuePortfolioChart className="bottom" shares={shares}/> 
         </div>
   </div>
