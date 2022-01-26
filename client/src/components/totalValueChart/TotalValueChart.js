@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import TotalValueChartDesign from './TotalValueChartDesign';
 import { getShares } from '../../SharesService';
 import { render } from "react-dom";
+import './TotalValueChartDesign.css'
 
 
 
@@ -50,7 +51,7 @@ const TotalValueChart = () => {
             if (loading) {
                 return <h2>Page is still loading, please wait</h2>
             }
-            return <TotalValueChartDesign totalShareData={totalShareData}/>
+            return <div id="total_value_chart"> <TotalValueChartDesign totalShareData={totalShareData}/></div>
             }
 
 

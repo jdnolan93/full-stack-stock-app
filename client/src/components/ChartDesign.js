@@ -3,6 +3,7 @@ import { render } from "react-dom";
 import HighStock from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
 import chartData from "./totalValueChart/ChartData";
+import "./totalValueChart/TotalValueChartDesign.css"
 
 
 const ChartDesign = ({selectedShare, shareData}) => {
