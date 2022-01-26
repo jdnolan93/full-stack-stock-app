@@ -4,6 +4,7 @@ import { getShares } from '../SharesService';
 
 //below are import needed for the chart
 import ChartDesign from './ChartDesign';
+import "./totalValueChart/TotalValueChartDesign.css"
 
 
 
@@ -94,7 +95,7 @@ const ShareDetails = () => {
     if (loading) {
         return <h2>Page is still loading, please wait</h2>
     }
-    return <ChartDesign selectedShare={chartHeadline} shareData={shareData}/>
+    return (<div id="total_value_chart"><ChartDesign selectedShare={chartHeadline} shareData={shareData}/> </div>)
             
     }
 
@@ -116,4 +117,4 @@ const ShareDetails = () => {
         </>)
 };
 
-export default ShareDetails;
+export default ShareDetails
