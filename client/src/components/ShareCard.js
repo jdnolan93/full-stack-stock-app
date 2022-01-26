@@ -15,7 +15,7 @@ const ShareCard = ({share, removeShareFromDB, updateShareNo}) => {
       <h1> {share.name} </h1>
       <p> {share.noOfShares}</p>
       <p> {share.symbol} </p>
-      <ShareUpdateNumber share = {share} updateShareNo={updateShareNo}/>
+      <ShareUpdateNumber share = {share} updateShareNo={updateShareNo} setShowForm={setShowForm}/>
       <button onClick={handleDelete}><i className="fas fa-trash"></i></button>
       <button onClick={handleEdit}> <i className="fas fa-edit"></i> </button>
   </ul>;

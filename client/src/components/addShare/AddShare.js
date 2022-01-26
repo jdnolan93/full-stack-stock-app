@@ -15,7 +15,7 @@ const AddShare = ({symbolInfo, shareInfo, postShareObject, updateShareInfo}) => 
 
     if(!isArrayEmpty) {
       return <>
-      <span data-tip data-for="moreInfo" className='info'>i</span>
+      <span data-tip data-for="moreInfo" className='info'><i className="fas fa-info-circle"></i></span>
       <ReactTooltip id="moreInfo">
         <span>Price: {symbolInfo['05. price']}p<br/> Open: {symbolInfo['02. open']}p<br/> High: {symbolInfo['03. high']}p<br/>Low: {symbolInfo['04. low']}p<br/>Volume: {symbolInfo['06. volume']}<br/>Latest trading day: {symbolInfo['07. latest trading day']}<br/>Previous close: {symbolInfo['08. previous close']}<br/>Change: {symbolInfo['09. change']}<br/>Change percent: {symbolInfo['10. change percent']}<br/>Type: {shareInfo['3. type']}<br/>Region: {shareInfo['4. region']}<br/>Currency{shareInfo['8. currency']}</span></ReactTooltip>
       </>
@@ -36,7 +36,7 @@ const AddShare = ({symbolInfo, shareInfo, postShareObject, updateShareInfo}) => 
         name: shareInfo['2. name'],
         symbol: shareInfo['1. symbol'],
         noOfShares: Number(noOfShares),
-        price: symbolInfo['05. price']
+        currentPrice: Number(symbolInfo['05. price'])
       } 
 
       postShareObject(shareObject);        

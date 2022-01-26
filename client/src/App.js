@@ -16,25 +16,28 @@ function App() {
 
   const [shares, setShares] = useState([]);
 
-  useEffect(()=>{
-    getShares().then((allShares) => {
-      setShares(allShares);
-    }, [shares])})
+  useEffect(() => {
+   getAll()
+  },[]);
 
+  const getAll = () => {
+    getShares()
+    .then((allShares) => setShares(allShares));
+  }
 
   const removeShare = (id) => {
-    deleteShare(id);
-    setShares(shares.filter(share => share._id !== id));
+    deleteShare(id)
+    .then(() => getAll());
   }
 
   const addNewShare = (newShare) => {
     postShare(newShare)
-    .then(res => setShares([...shares, res]));
+    .then(() => getAll());
   }
 
   const updateNoOfShares = (id, payload) => {
     updateShare(id, payload)
-    .then(res => setShares([...shares, res]));
+    .then(() => getAll());
   }
 
   return (
