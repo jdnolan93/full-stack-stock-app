@@ -13,7 +13,7 @@ const SharesGrid = ({removeShareFromDB, shares, updateShareNo}) => {
 
   return (
     <>
-    <TotalValue shares={shares}/>
+    {/* <TotalValue shares={shares}/> */}
         {sharesList}
     </>
   );

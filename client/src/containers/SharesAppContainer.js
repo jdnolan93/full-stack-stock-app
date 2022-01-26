@@ -7,6 +7,8 @@ import TotalValueChart from "../components/totalValueChart/TotalValueChart";
 
 import NavBar from "../components/NavBar";
 import CurrentValuePortfolioChart from "../components/CurrentValuePortfolioChart";
+import TotalValueContainer from './TotalValueContainer';
+import TotalValue from '../components/TotalValue';
 
 
 const SharesAppContainer = ({removeShareFromDB, shares}) => {
@@ -14,12 +16,13 @@ const SharesAppContainer = ({removeShareFromDB, shares}) => {
   return <div className="container">
 
         <div className="left" className="column">
-          <div className="top-right"><p>empty</p></div>
+          <TotalValue shares={shares} className="top-left"/>
           <SharesGrid className="bottom" removeShareFromDB={removeShareFromDB} shares={shares}/>
         </div>
         <div className="right" className="column">
-    <NavBar className="top-right"/>
-          <TotalValueChart />
+
+    <div className="top-right"/>
+
     <CurrentValuePortfolioChart className="bottom" shares={shares}/> 
         </div>
 

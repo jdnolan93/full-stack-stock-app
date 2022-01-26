@@ -1,5 +1,5 @@
 import React from "react";
-
+import '../App.css';
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import ShareDetails from "./ShareDetails";
@@ -73,7 +73,7 @@ const CurrentValuePortfolioChart = ({ shares }) => {
 
 
   return (
-    <div>
+    <div className = "charts">
       <ShareDetails className = "main-1" /> 
       <HighchartsReact highcharts={Highcharts} options={options} />
     </div>

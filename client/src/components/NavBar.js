@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <ul>
       <li>
-        <Link to="/"><button><i className="fas fa-home"> placeholder</i></button></Link>
+        <Link to="/"><button><i className="fas fa-home"></i></button></Link>
       </li>
       <li>
         <Link to="/add"><button>Add Shares</button></Link>
