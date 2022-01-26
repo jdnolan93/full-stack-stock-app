@@ -4,6 +4,7 @@ import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import ShareDetails from "./ShareDetails";
 import TotalValueChart from "./totalValueChart/TotalValueChart";
+import "./totalValueChart/TotalValueChartDesign.css"
 
 const CurrentValuePortfolioChart = ({ shares }) => {
   const shareName = shares.map((s) => s.name);
@@ -27,9 +28,10 @@ const CurrentValuePortfolioChart = ({ shares }) => {
   const options = {
     chart: {
       type: "pie",
+      styledMode: true
     },
     title: {
-      // text: "Current shares portfolio. January, 2022",
+      text: "Portfolio Allocations",
     },
     subtitle: {
       // text: 'Click the columns to view versions. Source: <a href="http://highcharts.com" target="_blank">Highcharts.com</a>',
@@ -74,11 +76,8 @@ const CurrentValuePortfolioChart = ({ shares }) => {
 
 
   return (
-    <div className = "charts">
-      <TotalValueChart />
-      <ShareDetails />
+    
       <HighchartsReact highcharts={Highcharts} options={options} />
-    </div>
   );
 };
 

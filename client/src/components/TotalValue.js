@@ -1,7 +1,10 @@
 import React from 'react';
 
-const TotalValue = ({ shares }) => {
+const TotalValue = ({ shares, chartType }) => {
 
+  const handleGetGraph = () => {
+    chartType("Total")
+  }
   const noOfShare = shares.map((s) => s.noOfShares);
   const currentPrice = shares.map((s) => s.currentPrice);
   const totalValue = noOfShare.reduce(function (r, a, i) {
@@ -9,7 +12,7 @@ const TotalValue = ({ shares }) => {
   }, 0);
   return(
   <div>
-    <h1>{totalValue}</h1>
+    <h1 onClick={handleGetGraph}>{totalValue}</h1>
   </div>)
 };
 
