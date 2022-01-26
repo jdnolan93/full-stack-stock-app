@@ -1,7 +1,6 @@
-import React, {useState } from 'react';
+import React, { useState } from 'react';
 import AddShare from '../components/addShare/AddShare';
 import FetchShare from '../components/addShare/FetchShare';
-import Calculator from '../components/calculator/Calculator';
 import '../components/addShare/AddShare.css'
 
 const AddShareContainer = ({apiKey, postShareObject}) => {

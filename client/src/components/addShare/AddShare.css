@@ -20,6 +20,17 @@ body {
   margin-top: 3rem;
 }
 
+.calculator-container {
+  background-color: #2d3c59;
+  border: solid 1px lightgrey;
+  border-radius: 5%;
+  width: auto;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 2.2rem;
+  text-align: center;
+}
+
 .fetch-shares-container {
   text-align: center;
 }
@@ -39,16 +50,6 @@ body {
   margin: 2rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  text-align: center;
-}
-
-.calculator-container {
-  background-color: #2d3c59;
-  border: solid 1px lightgrey;
-  border-radius: 5%;
-  margin: 2rem;
-  margin-top: 3rem;
-  padding: 2.2rem;
   text-align: center;
 }
 
