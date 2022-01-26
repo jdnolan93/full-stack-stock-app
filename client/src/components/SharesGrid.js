@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { getShares } from "../SharesService";
 import ShareCard from "./ShareCard";
+import TotalValue from "./TotalValue";
 
 
 const SharesGrid = ({removeShareFromDB, shares}) => {
@@ -13,6 +14,7 @@ const SharesGrid = ({removeShareFromDB, shares}) => {
 
   return (
     <>
+    <TotalValue shares={shares}/>
         {sharesList}
     </>
   );

@@ -24,8 +24,8 @@ const TotalValueContainer = ({shares}) => {
     <div>
       <hr />
       <div>
-        <TotalValue shares={shares}/>
-        <CurrentValuePortfolioChart shares={shares} />
+        {/* <TotalValue shares={shares}/> */}
+        {/* <CurrentValuePortfolioChart shares={shares} /> */}
       </div>
     </div>
   );

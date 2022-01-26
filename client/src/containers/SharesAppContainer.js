@@ -8,6 +8,8 @@ import Header from "../components/Header";
 import getApiKey from '../key';
 import '../App.css';
 
+import CurrentValuePortfolioChart from "../components/CurrentValuePortfolioChart";
+
 
 
 // const apiKey = getApiKey()
@@ -15,14 +17,13 @@ import '../App.css';
 const SharesAppContainer = ({removeShareFromDB, shares}) => {
 
 
-  return <div className="grid">
+  return <div className="container">
     <Header className="top-header"/>
     <TotalValueContainer className="total-value" shares={shares}/>
     <SharesGrid className = "sidebar" removeShareFromDB={removeShareFromDB} shares={shares}/>
     <ShareDetails className = "main-1" /> 
-    
-          
-  </div>;
+    <CurrentValuePortfolioChart shares={shares}/>
+  </div>
 };
 
 

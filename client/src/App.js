@@ -16,10 +16,9 @@ function App() {
 
   const [shares, setShares] = useState([]);
 
-  useEffect(()=>{
-    getShares().then((allShares) => {
-      setShares(allShares);
-    }, [shares])})
+  useEffect(() => {
+    getShares().then((allShares) => setShares(allShares));
+  }, []);
 
 
   const removeShare = (id) => {
@@ -34,8 +33,9 @@ function App() {
   }
 
   return (
+    
     <Router>
-      <NavBar/>
+      {/* <NavBar/> */}
       <Routes>
         <Route path="/" element={<SharesAppContainer shares={shares} removeShareFromDB={id => removeShare(id)}/>} />
         <Route path="/add" element={<AddShareContainer apiKey={apiKey} postShareObject={newShare => addNewShare(newShare)}/>} />

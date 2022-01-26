@@ -12,7 +12,7 @@ body {
   gap: 5px 5px; 
   grid-template-areas: 
     "top-header top-header top-header"
-    "total-value main-1 main-1"
+    "sidebar main-1 main-1"
     "sidebar main-1 main-1"
     "sidebar main-2 main-2"
     "sidebar main-2 main-2"; 
