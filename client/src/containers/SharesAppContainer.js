@@ -11,13 +11,13 @@ import TotalValueContainer from './TotalValueContainer';
 import TotalValue from '../components/TotalValue';
 
 
-const SharesAppContainer = ({removeShareFromDB, shares}) => {
+const SharesAppContainer = ({removeShareFromDB, shares, updateShareNo}) => {
 
   return <div className="container">
 
         <div className="left" className="column">
           <TotalValue shares={shares} className="top-left"/>
-          <SharesGrid className="bottom" removeShareFromDB={removeShareFromDB} shares={shares}/>
+          <SharesGrid className="bottom" removeShareFromDB={removeShareFromDB} shares={shares} updateShareNo={updateShareNo}/>
         </div>
         <div className="right" className="column">
     
