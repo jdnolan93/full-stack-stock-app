@@ -9,7 +9,7 @@ const CurrentPosition = ({share, removeShareFromDB}) => {
       <span className="big-red" >{share.name} ({share.symbol})</span>
       <br/> Amount owned: {share.noOfShares}
       <br/>Total value: £{(Number(share.noOfShares)*Number(share.currentPrice)).toLocaleString()}<br/>
-      <button onClick={handleDelete}>Remove</button>
+      <button onClick={handleDelete}>Delete</button>
       </li>
       
   );
