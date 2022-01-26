@@ -6,13 +6,16 @@ const DisplayShareList = ({shareSearchArray, getInfo, updateShareInfo, clearArra
 
    const displayShareList = shareSearchArray.map(share => <DisplayShare getInfo={getInfo} share={share} updateShareInfo={updateShareInfo} key={share['1. symbol']} />);
 
+   const infoSentence = shareSearchArray.length !== 0 ? "Select a share to add to portfolio:" : ""
+
    const handleClick = () => {
     clearArray([])
    }
     
   return (
     <div className='display-share-list-container'>
-        <p>Select a share to add to portfolio:</p>
+        <h3>Search Results:</h3>
+        <p>{infoSentence}</p>
         <ul className="display-list"> 
             {displayShareList}
         </ul>
