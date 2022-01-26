@@ -12,10 +12,10 @@ const SharesGrid = ({removeShareFromDB, shares, updateShareNo, getGraph, chartTy
 })
 
   return (
-    <>
+    <div className="shares-grid">
     {/* <TotalValue shares={shares}/> */}
         {sharesList}
-    </>
+    </div>
   );
 };
 

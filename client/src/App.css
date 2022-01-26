@@ -97,6 +97,13 @@ ul {
 
 }
 
+
+
+.shares-grid {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 button {
   background-color: #2d3c59;
   border: none;
@@ -129,14 +136,19 @@ button {
 .total-value-cont{
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  padding-left: 100px;
+  justify-content: center
 }
 
 .navbar{
+  width: 30%;
+  margin-left: 700px;
+  
+
+}
+
+#total_value {
+  font-size: 50px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  text-align: center;
+  justify-content: center;
 }
 

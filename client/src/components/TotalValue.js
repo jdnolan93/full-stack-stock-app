@@ -1,4 +1,5 @@
 import React from 'react';
+import "../App.css"
 
 const TotalValue = ({ shares, chartType }) => {
 
@@ -11,8 +12,8 @@ const TotalValue = ({ shares, chartType }) => {
     return r + a * currentPrice[i];
   }, 0);
   return(
-  <div>
-    <h1 onClick={handleGetGraph}>{totalValue}</h1>
+  <div className='total-value-cont'>
+    <h1 id="total_value" onClick={handleGetGraph}>Total: {totalValue}</h1>
   </div>)
 };
 

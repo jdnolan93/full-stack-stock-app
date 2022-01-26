@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
 
   return (
-    <ul>
+    <>
+    
+    <ul className="navbar">
       <li>
-        <Link to="/"><button><i className="fas fa-home"></i></button></Link>
+        <Link to="/"><button><i className="fas fa-home"></i> Home</button></Link>
       </li>
       <li>
         <Link to="/add"><button>Add Shares</button></Link>
@@ -15,6 +17,7 @@ const NavBar = () => {
         <Link to="/calculator"><button>Calculator</button></Link>
       </li>
     </ul>
+    </>
   );
 }
 

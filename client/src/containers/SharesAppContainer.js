@@ -88,7 +88,8 @@ const SharesAppContainer = ({removeShareFromDB, shares, updateShareNo}) => {
     <div className="top-right"/>
     <div className = "charts">
     {renderCorrectChart()}
-
+    <br />
+    <br />
     <CurrentValuePortfolioChart className="bottom" shares={shares}/> 
     </div>
         </div>
