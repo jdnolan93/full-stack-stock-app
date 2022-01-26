@@ -29,6 +29,7 @@ const CurrentValuePortfolioChart = ({ shares }) => {
       type: "pie",
     },
     title: {
+      text: " ",
       // text: "Current shares portfolio. January, 2022",
     },
     subtitle: {

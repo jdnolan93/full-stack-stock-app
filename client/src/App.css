@@ -2,7 +2,7 @@ body{
   background-color: #151D26;
 }
 
-.container {
+/* .container {
   display: grid; 
   grid-template-columns: 200px 300px 300px; 
   grid-template-rows: 52px 2.1px 305px 205px 100px; 
@@ -13,7 +13,7 @@ body{
     "sidebar main-1 main-1"
     "sidebar main-2 main-2"
     "sidebar main-2 main-2"; 
-};
+}; */
 
 .top-header { 
   grid-area: top-header; 
