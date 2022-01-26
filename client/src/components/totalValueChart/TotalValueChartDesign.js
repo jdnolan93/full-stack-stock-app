@@ -2,12 +2,15 @@ import React, { useState, useEffect } from "react";
 import { render } from "react-dom";
 import HighStock from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
+import chartData from "./ChartData";
 
 
 
-const TotalValueChartDesign = () => {
 
-const mockData = []
+const TotalValueChartDesign = ({totalShareData}) => {
+
+
+const mockData = totalShareData
 
 
 let mockOptions = {
@@ -90,10 +93,10 @@ let mockOptions = {
         for (var i = 0; i < mockData.length; i++) {
           ohlcData.push([
             mockData[i][0], // the date
-            mockData[i][1], // open
-            mockData[i][2], // high
-            mockData[i][3], // low
-            mockData[i][4] // close
+            mockData[i][1]*10, // open
+            mockData[i][2]*10, // high
+            mockData[i][3]*10, // low
+            mockData[i][4]*10 // close
           ]);
         }
         return ohlcData;

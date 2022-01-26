@@ -7,6 +7,8 @@ import SharesGrid from '../components/SharesGrid';
 import Header from "../components/Header";
 import getApiKey from '../key';
 import '../App.css';
+import TotalValueChartDesign from "../components/totalValueChart/TotalValueChartDesign";
+import TotalValueChart from "../components/totalValueChart/TotalValueChart";
 
 
 
@@ -19,7 +21,8 @@ const SharesAppContainer = ({removeShareFromDB, shares}) => {
     <Header className="top-header"/>
     <TotalValueContainer className="total-value" shares={shares}/>
     <SharesGrid className = "sidebar" removeShareFromDB={removeShareFromDB} shares={shares}/>
-    <ShareDetails className = "main-1" /> 
+    <ShareDetails className = "main-1" />
+    <TotalValueChart />
     
           
   </div>;
