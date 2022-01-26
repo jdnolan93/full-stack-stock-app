@@ -41,8 +41,9 @@ function App() {
   }
 
   return (
+    
     <Router>
-      <NavBar/>
+      {/* <NavBar/> */}
       <Routes>
         <Route path="/" element={<SharesAppContainer shares={shares} removeShareFromDB={id => removeShare(id) } updateShareNo={(id, payload) => updateNoOfShares(id, payload)}/>} />
         <Route path="/add" element={<AddShareContainer apiKey={apiKey} postShareObject={newShare => addNewShare(newShare)}/>} />

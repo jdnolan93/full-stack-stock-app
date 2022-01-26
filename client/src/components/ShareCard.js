@@ -12,7 +12,7 @@ const ShareCard = ({share, removeShareFromDB, updateShareNo}) => {
   if(showForm){
 
   return <ul> 
-      <h1> {share.name} </h1>
+      <p> {share.name} </p>
       <p> {share.noOfShares}</p>
       <p> {share.symbol} </p>
       <ShareUpdateNumber share = {share} updateShareNo={updateShareNo} setShowForm={setShowForm}/>
@@ -23,8 +23,8 @@ const ShareCard = ({share, removeShareFromDB, updateShareNo}) => {
 
   else{
     return (
-        <ul> 
-      <h1> {share.name} </h1>
+        <ul className='share-list'> 
+      <b> {share.name} </b>
       <p> {share.noOfShares}</p>
       <p> {share.symbol} </p>
       <button onClick={handleDelete}><i className="fas fa-trash"></i></button>

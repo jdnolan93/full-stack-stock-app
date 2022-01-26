@@ -1,5 +1,6 @@
 import React from "react";
 import ShareCard from "./ShareCard";
+import TotalValue from "./TotalValue";
 
 
 const SharesGrid = ({removeShareFromDB, shares, updateShareNo}) => {
@@ -12,6 +13,7 @@ const SharesGrid = ({removeShareFromDB, shares, updateShareNo}) => {
 
   return (
     <>
+    <TotalValue shares={shares}/>
         {sharesList}
     </>
   );
