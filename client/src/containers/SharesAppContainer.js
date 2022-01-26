@@ -12,7 +12,8 @@ import TotalValueContainer from './TotalValueContainer';
 import TotalValue from '../components/TotalValue';
 import ShareDetails from '../components/ShareDetails';
 
-const SharesAppContainer = ({removeShareFromDB, shares}) => {
+
+const SharesAppContainer = ({removeShareFromDB, shares, updateShareNo}) => {
   const [shareData, setShareData] = useState([])
   const [selectedShare, setSelectedShare] = useState("MSFT")
   const [chartHeadline, setChartHeadline] = useState(selectedShare)
@@ -74,17 +75,20 @@ const SharesAppContainer = ({removeShareFromDB, shares}) => {
     }
 
 
+
   return <div className="container">
 
         <div className="left" className="column">
+
           <TotalValue chartType={(value) =>setShowCorrectGraph(value)} shares={shares} className="top-left"/>
-          <SharesGrid chartType={(value) =>setShowCorrectGraph(value)} getGraph={(symbol) => graphRender(symbol)} className="bottom" removeShareFromDB={removeShareFromDB} shares={shares}/>
+          <SharesGrid chartType={(value) =>setShowCorrectGraph(value)} getGraph={(symbol) => graphRender(symbol)} className="bottom" removeShareFromDB={removeShareFromDB} updateShareNo={updateShareNo} shares={shares}/>
         </div>
         <div className="right" className="column">
 
     <div className="top-right"/>
     <div className = "charts">
     {renderCorrectChart()}
+
     <CurrentValuePortfolioChart className="bottom" shares={shares}/> 
     </div>
         </div>

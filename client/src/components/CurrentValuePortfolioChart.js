@@ -32,6 +32,7 @@ const CurrentValuePortfolioChart = ({ shares }) => {
     },
     title: {
       text: "Portfolio Allocations",
+
     },
     subtitle: {
       // text: 'Click the columns to view versions. Source: <a href="http://highcharts.com" target="_blank">Highcharts.com</a>',
