@@ -5,7 +5,7 @@ const Header = () => {
   return <div className = "header-nav-bar">
       <button><i className="fas fa-home"> placeholder</i></button>
       <button>Add Share placeholder</button>
-      <h1>This is the name of our app!</h1>
+      <p>This is the name of our app!</p>
   </div>;
 };
 

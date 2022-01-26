@@ -27,10 +27,10 @@ const CurrentValuePortfolioChart = ({ shares }) => {
       type: "pie",
     },
     title: {
-      text: "Current shares portfolio. January, 2022",
+      // text: "Current shares portfolio. January, 2022",
     },
     subtitle: {
-      text: 'Click the columns to view versions. Source: <a href="http://highcharts.com" target="_blank">Highcharts.com</a>',
+      // text: 'Click the columns to view versions. Source: <a href="http://highcharts.com" target="_blank">Highcharts.com</a>',
     },
     xAxis: {
       type: "category",
@@ -55,9 +55,9 @@ const CurrentValuePortfolioChart = ({ shares }) => {
     },
 
     tooltip: {
-      headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-      pointFormat:
-        '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total value<br/>',
+      // headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+      // pointFormat:
+      //   '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total value<br/>',
     },
     // option.series[0].data[x].name
     // option.series[0].data[x].y
@@ -73,7 +73,6 @@ const CurrentValuePortfolioChart = ({ shares }) => {
 
   return (
     <div>
-      <h2>Highcharts</h2>
       <HighchartsReact highcharts={Highcharts} options={options} />
     </div>
   );

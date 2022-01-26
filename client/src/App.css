@@ -8,8 +8,8 @@ body {
 .container {
   display: grid; 
   grid-template-columns: 200px 300px 300px; 
-  grid-template-rows: 100px 170px 100px 170px 100px; 
-  gap: 5px 5px; 
+  grid-template-rows: 52px 2.1px 305px 205px 100px; 
+  gap: 0px 0px; 
   grid-template-areas: 
     "top-header top-header top-header"
     "sidebar main-1 main-1"
@@ -22,10 +22,14 @@ body {
   align-items: stretch; 
   height: 50%; 
 }
-
 .top-header { grid-area: top-header; }
-.total-value { grid-area: total-value; }
-.sidebar { grid-area: sidebar; }
+.sidebar { 
+  grid-area: sidebar; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
 .main-1 { grid-area: main-1; }
 .main-2 { grid-area: main-2; }
 
