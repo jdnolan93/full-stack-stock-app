@@ -1,5 +1,6 @@
 import ShareUpdateNumber from './ShareUpdateNumber';
 import { useState } from 'react';
+import '../App.css';
 
 const ShareCard = ({share, removeShareFromDB, updateShareNo}) => {
   const [showForm, setShowForm] = useState(false)
@@ -14,25 +15,29 @@ const ShareCard = ({share, removeShareFromDB, updateShareNo}) => {
   if(showForm){
 
   return <div className='share-list'> 
-      <p> {share.name} </p>
-      <p> {share.noOfShares}</p>
-      <p> {share.symbol} </p>
-      <p>{Number(share.noOfShares)*Number(share.currentPrice)}</p>
+      <strong><h4> {share.symbol} </h4></strong>
+      <b> {share.name} </b>
+      <b> Amount owned: {share.noOfShares}</b>
+      <b>Total value: {Number(share.noOfShares)*Number(share.currentPrice)}</b>
       <ShareUpdateNumber share = {share} updateShareNo={updateShareNo} setShowForm={setShowForm}/>
+      <div className='edit-delete'>
       <button onClick={handleDelete}><i className="fas fa-trash"></i></button>
       <button onClick={handleEdit}> <i className="fas fa-edit"></i> </button>
+      </div>
   </div>;
 }
 
   else{
     return (
         <div className='share-list'> 
-      <b> {share.name} </b>
-      <p> {share.noOfShares}</p>
-      <p> {share.symbol} </p>
-      <p>{Number(share.noOfShares)*Number(share.currentPrice)}</p>
+        <strong><h4>{share.symbol}</h4></strong>
+        <b>{share.name}</b>
+      <b>Amount owned: {share.noOfShares}</b>
+      <b>{Number(share.noOfShares)*Number(share.currentPrice)}</b>
+      <div className='edit-delete'>
       <button onClick={handleDelete}><i className="fas fa-trash"></i></button>
       <button onClick={handleEdit}> <i className="fas fa-edit"></i> </button>
+      </div>
       </div>
     )
 }
