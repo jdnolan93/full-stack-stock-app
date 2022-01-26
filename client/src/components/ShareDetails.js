@@ -8,6 +8,7 @@ import ChartDesign from './ChartDesign';
 
 
 
+
 const ShareDetails = () => {
     const apiKey = getApiKey()
     const [shares, setShares] = useState([])
@@ -94,6 +95,7 @@ const ShareDetails = () => {
         return <h2>Page is still loading, please wait</h2>
     }
     return <ChartDesign selectedShare={chartHeadline} shareData={shareData}/>
+            
     }
 
 

@@ -120,7 +120,8 @@ let mockOptions = {
 
 
   return (
-    <div className="">
+
+    <div>
       {
         <HighchartsReact
           highcharts={HighStock}

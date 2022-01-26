@@ -1,24 +1,24 @@
-import SharesAppContainer from '../containers/SharesAppContainer';
-import { deleteShare } from '../SharesService';
 import ShareUpdateNumber from './ShareUpdateNumber';
 import { useState } from 'react';
 
-const ShareCard = ({share, removeShareFromDB}) => {
+const ShareCard = ({share, removeShareFromDB, updateShareNo}) => {
   const [showForm, setShowForm] = useState(false)
 
   const handleDelete = () => removeShareFromDB(share._id);
-  
 
+  
+  
   const handleEdit = () => {
-      setShowForm(true)
+      setShowForm(true);
   }
   if(showForm){
 
   return <ul> 
-      <h1> {share.name} </h1>
+      <p> {share.name} </p>
       <p> {share.noOfShares}</p>
       <p> {share.symbol} </p>
-      <ShareUpdateNumber id = {share._id}/>
+      <p>{Number(share.noOfShares)*Number(share.currentPrice)}</p>
+      <ShareUpdateNumber share = {share} updateShareNo={updateShareNo} setShowForm={setShowForm}/>
       <button onClick={handleDelete}><i className="fas fa-trash"></i></button>
       <button onClick={handleEdit}> <i className="fas fa-edit"></i> </button>
   </ul>;
@@ -26,10 +26,11 @@ const ShareCard = ({share, removeShareFromDB}) => {
 
   else{
     return (
-        <ul> 
-      <h1> {share.name} </h1>
+        <ul className='share-list'> 
+      <b> {share.name} </b>
       <p> {share.noOfShares}</p>
       <p> {share.symbol} </p>
+      <p>{Number(share.noOfShares)*Number(share.currentPrice)}</p>
       <button onClick={handleDelete}><i className="fas fa-trash"></i></button>
       <button onClick={handleEdit}> <i className="fas fa-edit"></i> </button>
       </ul>

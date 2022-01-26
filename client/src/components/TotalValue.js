@@ -9,9 +9,7 @@ const TotalValue = ({ shares }) => {
   }, 0);
   return(
   <div>
-
-    <h2>total value</h2>
-    {totalValue}
+    <h1>{totalValue}</h1>
   </div>)
 };
 
