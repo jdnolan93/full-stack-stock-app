@@ -16,6 +16,7 @@ const SharesAppContainer = ({removeShareFromDB, shares}) => {
     <CurrentValuePortfolioChart className="bottom" shares={shares}/> 
         </div>
   </div>
+
 };
 
 export default SharesAppContainer;
