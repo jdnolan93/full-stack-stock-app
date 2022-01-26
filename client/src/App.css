@@ -114,9 +114,7 @@ ul {
   text-align: center;
 }
 
-  flex-grow: 1;  
-  overflow-y: auto;
-}
+
 
 .share-list {
   display: flex;
