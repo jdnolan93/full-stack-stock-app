@@ -29,8 +29,8 @@ const CurrentValuePortfolioChart = ({ shares }) => {
       type: "pie",
     },
     title: {
-      text: " ",
-      // text: "Current shares portfolio. January, 2022",
+      // text: " ",
+      text: "Current Portfolio Breakdown",
     },
     subtitle: {
       // text: 'Click the columns to view versions. Source: <a href="http://highcharts.com" target="_blank">Highcharts.com</a>',
