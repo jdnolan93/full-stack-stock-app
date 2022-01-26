@@ -1,21 +1,10 @@
-
-import TotalValueContainer from "./TotalValueContainer";
 import React from 'react';
-import ShareDetails from '../components/ShareDetails';
 import SharesGrid from '../components/SharesGrid';
-
-import Header from "../components/Header";
-import getApiKey from '../key';
 import '../App.css';
 import NavBar from "../components/NavBar";
 import CurrentValuePortfolioChart from "../components/CurrentValuePortfolioChart";
 
-
-
-// const apiKey = getApiKey()
-
 const SharesAppContainer = ({removeShareFromDB, shares}) => {
-
 
   return <div className="container">
         <div className="left" className="column">
@@ -28,6 +17,5 @@ const SharesAppContainer = ({removeShareFromDB, shares}) => {
         </div>
   </div>
 };
-
 
 export default SharesAppContainer;
