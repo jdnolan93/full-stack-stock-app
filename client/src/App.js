@@ -7,6 +7,7 @@ import {getShares, postShare, deleteShare, updateShare} from './SharesService';
 import getApiKey from './key';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import NavBar from "./components/NavBar";
+import CalculatorContainer from './containers/CalculatorContainer';
 
 
 
@@ -53,6 +54,7 @@ function App() {
       <Routes>
         <Route path="/" element={<SharesAppContainer shares={shares} removeShareFromDB={id => removeShare(id) } updateShareNo={(id, payload) => updateNoOfShares(id, payload)}/>} />
         <Route path="/add" element={<AddShareContainer apiKey={apiKey} postShareObject={newShare => addNewShare(newShare)}/>} />
+        <Route path="/calculator" element={<CalculatorContainer/>} />
       </Routes>
     </Router>
 

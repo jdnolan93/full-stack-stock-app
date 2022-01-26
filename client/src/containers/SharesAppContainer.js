@@ -20,9 +20,7 @@ const SharesAppContainer = ({removeShareFromDB, shares}) => {
           <SharesGrid className="bottom" removeShareFromDB={removeShareFromDB} shares={shares}/>
         </div>
         <div className="right" className="column">
-
-    <div className="top-right"/>
-
+    <div>
     <CurrentValuePortfolioChart className="bottom" shares={shares}/> 
         </div>
 

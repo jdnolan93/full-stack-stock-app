@@ -37,9 +37,6 @@ const AddShareContainer = ({apiKey, postShareObject}) => {
 
         <AddShare symbolInfo={symbolInfo} shareInfo={shareInfo} postShareObject={postShareObject} updateShareInfo={share => setShareInfo(share)}/>
       </div>
-      <div className="calculator-container">
-        <Calculator/>
-      </div>
       </section>
     );
 };

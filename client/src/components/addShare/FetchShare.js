@@ -21,7 +21,7 @@ const FetchShare = ({getInfo, updateShareInfo, getArray, shareSearchArray, clear
       <div className='fetch-shares-container'>
         <h2>Search and Add Shares</h2>
         <form onSubmit={handleOnSubmit}> 
-            <input type="search" placeholder='Enter company or share symbol' value={keywords} onChange={handleTextChange} size="30" autoFocus required/>
+            <input type="search" placeholder='Enter company or share symbol' value={keywords} onChange={handleTextChange} size="40" autoFocus required/><br/>
             <input type="submit" value="Submit" />
         </form>
        <DisplayShareList getInfo={getInfo} shareSearchArray={shareSearchArray} updateShareInfo={updateShareInfo} clearArray={clearArray}/>
