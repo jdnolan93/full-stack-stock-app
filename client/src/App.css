@@ -1,35 +1,33 @@
-body{
-  background-color: #151D26;
+body {
+  background-color: #151d26;
 }
 
 .container {
-  display: grid; 
-  grid-template-columns: 200px 300px 300px; 
-  grid-template-rows: 52px 2.1px 305px 205px 100px; 
-  gap: 0px 0px; 
-  grid-template-areas: 
+  display: grid;
+  grid-template-columns: 200px 300px 300px;
+  grid-template-rows: 52px 2.1px 305px 205px 100px;
+  gap: 0px 0px;
+  grid-template-areas:
     "top-header top-header top-header"
     "sidebar main-1 main-1"
     "sidebar main-1 main-1"
     "sidebar main-2 main-2"
-    "sidebar main-2 main-2"; 
-};
+    "sidebar main-2 main-2";
+}
+
 
 .container {
+
   height: 100%;
   overflow: hidden;
   margin: 0px;
   display: flex;
-  height: 100%;   
-  overflow: hidden; 
-  margin: 0px;  
-  display: flex;  
   box-sizing: border-box;
   font-family: "Dongle", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #151D26;
-  color: #0FAEBF;
+  background-color: #151d26;
+  color: #0faebf;
 }
 
 .column {
@@ -46,7 +44,7 @@ body{
 
 .left {
   flex-shrink: 0;
-  flex-shrink: 0;  
+  flex-shrink: 0;
   padding-right: 1000px;
 }
 
@@ -82,8 +80,6 @@ ul {
   text-align: center;
 }
 
-
-
 .share-list {
   display: flex;
   flex-direction: column;
@@ -92,16 +88,17 @@ ul {
   padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  border:solid 1px white;
+  border: solid 1px white;
   border-radius: 5%;
   box-shadow: 0px 10px 14px -7px #404059;
   background-color: #2D3C59;
   margin-top: 10px;
   margin-right: 10px;
+
 }
 
 button {
-  background-color: #2D3C59; 
+  background-color: #2d3c59;
   border: none;
   color: white;
   padding: 0px 0px 0px 0px;
@@ -128,6 +125,7 @@ button {
   padding-top: 10px;
 }
 
+
 .total-value-cont{
   display: flex;
   flex-direction: row;
@@ -141,3 +139,4 @@ button {
   justify-content: space-between;
   text-align: center;
 }
+

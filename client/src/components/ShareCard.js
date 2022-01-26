@@ -2,11 +2,15 @@ import ShareUpdateNumber from './ShareUpdateNumber';
 import { useState } from 'react';
 import '../App.css';
 
-const ShareCard = ({share, removeShareFromDB, updateShareNo}) => {
+const ShareCard = ({share, removeShareFromDB, updateShareNo, getGraph, chartType}) => {
   const [showForm, setShowForm] = useState(false)
 
   const handleDelete = () => removeShareFromDB(share._id);
-
+  const handleGetGraph = (event) => {
+    event.preventDefault();
+    getGraph(share.symbol)
+    chartType("Individual")
+  }
   
   
   const handleEdit = () => {
@@ -23,6 +27,7 @@ const ShareCard = ({share, removeShareFromDB, updateShareNo}) => {
       <div className='edit-delete'>
       <button onClick={handleDelete}><i className="fas fa-trash"></i></button>
       <button onClick={handleEdit}> <i className="fas fa-edit"></i> </button>
+      <button onClick={handleGetGraph}>Display </button>
       </div>
   </div>;
 }
@@ -37,6 +42,7 @@ const ShareCard = ({share, removeShareFromDB, updateShareNo}) => {
       <div className='edit-delete'>
       <button onClick={handleDelete}><i className="fas fa-trash"></i></button>
       <button onClick={handleEdit}> <i className="fas fa-edit"></i> </button>
+      <button onClick={handleGetGraph}>Display </button>
       </div>
       </div>
     )

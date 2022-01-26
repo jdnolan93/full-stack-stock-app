@@ -12,6 +12,9 @@ const mockData = shareData
 
 
 let mockOptions = {
+  chart: {
+    styledMode: true
+},
   rangeSelector: {buttons: [{
     type: 'month',
     count: 1,
