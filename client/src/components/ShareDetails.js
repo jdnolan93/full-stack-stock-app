@@ -116,4 +116,4 @@ const ShareDetails = () => {
         </>)
 };
 
-export default ShareDetails;
+export default ShareDetails

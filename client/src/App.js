@@ -16,6 +16,7 @@ function App() {
 
   const [shares, setShares] = useState([]);
 
+
   useEffect(() => {
    getAll()
   },[]);
@@ -24,6 +25,11 @@ function App() {
     getShares()
     .then((allShares) => setShares(allShares));
   }
+
+  useEffect(() => {
+    getShares()
+    .then((allShares) => setShares(allShares))
+  },[]);
 
   const removeShare = (id) => {
     deleteShare(id)
