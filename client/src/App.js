@@ -52,8 +52,8 @@ function App() {
     <Router>
       <NavBar className = "navbar"/>
       <Routes>
-        <Route path="/" element={<SharesAppContainer shares={shares} removeShareFromDB={id => removeShare(id) } updateShareNo={(id, payload) => updateNoOfShares(id, payload)}/>} />
-        <Route path="/add" element={<AddShareContainer apiKey={apiKey} postShareObject={newShare => addNewShare(newShare)}/>} />
+        <Route path="/" element={<SharesAppContainer shares={shares} removeShareFromDB={id => removeShare(id)} updateShareNo={(id, payload) => updateNoOfShares(id, payload)}/>} />
+        <Route path="/add" element={<AddShareContainer apiKey={apiKey} postShareObject={newShare => addNewShare(newShare)} shares={shares} removeShareFromDB={id => removeShare(id) }/>} />
         <Route path="/calculator" element={<CalculatorContainer/>} />
       </Routes>
     </Router>

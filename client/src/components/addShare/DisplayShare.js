@@ -9,7 +9,7 @@ const DisplayShare = ({share, getInfo, updateShareInfo}) => {
     
     return (
         <li>
-            <span className='redHover' onClick={handleClick}>{share['2. name']} &nbsp; {share['4. region']} &nbsp;  {share['1. symbol']}</span>
+            <span className='white redHover' onClick={handleClick}>{share['2. name']} &nbsp; {share['4. region']} &nbsp;  {share['1. symbol']}</span>
        </li>
     );
 };

@@ -4,7 +4,7 @@ import '../components/addShare/AddShare.css'
 
 const CalculatorContainer = () => {
   return (
-    <section id='add-page-container'>
+    <section id='calc-page-container'>
       <div className="calculator-container">
             <Calculator/>
       </div>

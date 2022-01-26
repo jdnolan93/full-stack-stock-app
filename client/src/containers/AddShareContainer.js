@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import AddShare from '../components/addShare/AddShare';
 import FetchShare from '../components/addShare/FetchShare';
 import '../components/addShare/AddShare.css'
+import CurrentPositionGrid from '../components/addShare/CurrentPositionGrid';
 
-const AddShareContainer = ({apiKey, postShareObject}) => {
+
+const AddShareContainer = ({apiKey, postShareObject, shares, removeShareFromDB}) => {
 
     const [shareSearchArray, setShareSearchArray] = useState([]);
     
@@ -30,13 +32,19 @@ const AddShareContainer = ({apiKey, postShareObject}) => {
     }
 
   return (
+    <div className="container-box">
+      <section id='current-container'>
+        <CurrentPositionGrid shares={shares} removeShareFromDB={removeShareFromDB}/>
+      </section>
+
       <section id='add-page-container'>
-      <div className="add-share-container">
+      <div className="add-container">
         <FetchShare getInfo={symbol => getSymbolInfo(symbol)} updateShareInfo={share => setShareInfo(share)} getArray={keywords => getShareSearchArray(keywords)} shareSearchArray={shareSearchArray} clearArray={emptyArray => setShareSearchArray(emptyArray)}/>
 
         <AddShare symbolInfo={symbolInfo} shareInfo={shareInfo} postShareObject={postShareObject} updateShareInfo={share => setShareInfo(share)}/>
       </div>
       </section>
+    </div>  
     );
 };
 

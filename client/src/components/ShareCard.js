@@ -22,7 +22,7 @@ const ShareCard = ({share, removeShareFromDB, updateShareNo, getGraph, chartType
       <strong><h4> {share.symbol} </h4></strong>
       <b> {share.name} </b>
       <b> Amount owned: {share.noOfShares}</b>
-      <b>Total value: {Number(share.noOfShares)*Number(share.currentPrice)}</b>
+      <b>Total value: £{(Number(share.noOfShares)*Number(share.currentPrice)).toLocaleString()}</b>
       <ShareUpdateNumber share = {share} updateShareNo={updateShareNo} setShowForm={setShowForm}/>
       <div className='edit-delete'>
       <button onClick={handleDelete}><i className="fas fa-trash"></i></button>
@@ -38,7 +38,7 @@ const ShareCard = ({share, removeShareFromDB, updateShareNo, getGraph, chartType
         <strong><h4>{share.symbol}</h4></strong>
         <b>{share.name}</b>
       <b>Amount owned: {share.noOfShares}</b>
-      <b>{Number(share.noOfShares)*Number(share.currentPrice)}</b>
+      <b>Total value: £{(Number(share.noOfShares)*Number(share.currentPrice)).toLocaleString()}</b>
       <div className='edit-delete'>
       <button onClick={handleDelete}><i className="fas fa-trash"></i></button>
       <button onClick={handleEdit}> <i className="fas fa-edit"></i> </button>

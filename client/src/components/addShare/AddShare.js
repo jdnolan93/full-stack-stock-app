@@ -59,11 +59,11 @@ const AddShare = ({symbolInfo, shareInfo, postShareObject, updateShareInfo}) => 
 
   return (
     <div className='add-share-container'>
-      <div className='display'>
+      <div className='white display'>
         {display} &nbsp; {moreInfo()} 
       </div> 
       <form onSubmit={handleOnSubmit}> 
-        <input type="number" min="1" placeholder='No. of shares' onChange={handleOnChange} value={noOfShares} required/>
+        <input type="number" min="1" placeholder='Enter number of shares' onChange={handleOnChange} value={noOfShares} required/><br/>
         <input type="submit" value="Add to portfolio"/>
         <ToastContainer theme="dark" transition={Zoom}/>
       </form>
