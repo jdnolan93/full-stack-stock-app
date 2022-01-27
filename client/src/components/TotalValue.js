@@ -13,7 +13,7 @@ const TotalValue = ({ shares, chartType }) => {
   }, 0);
   return(
   <div className='total-value-cont'>
-    <h1 id="total_value" onClick={handleGetGraph}>Total: {totalValue}</h1>
+    <h1 id="total_value" onClick={handleGetGraph}>Total value: {totalValue}</h1>
   </div>)
 };
 

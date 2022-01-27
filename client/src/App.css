@@ -3,29 +3,14 @@ body {
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 200px 300px 300px;
-  grid-template-rows: 52px 2.1px 305px 205px 100px;
-  gap: 0px 0px;
-  grid-template-areas:
-    "top-header top-header top-header"
-    "sidebar main-1 main-1"
-    "sidebar main-1 main-1"
-    "sidebar main-2 main-2"
-    "sidebar main-2 main-2";
-}
-
-
-.container {
-
   height: 100%;
   overflow: hidden;
   margin: 0px;
   display: flex;
   box-sizing: border-box;
-  font-family: "Dongle", sans-serif;
+  /* font-family: "Dongle", sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
   background-color: #151d26;
   color: #0faebf;
 }
@@ -97,8 +82,6 @@ ul {
 
 }
 
-
-
 .shares-grid {
   display: flex;
   flex-direction: column-reverse;
@@ -106,9 +89,10 @@ ul {
 
 button {
   background-color: #2d3c59;
+  border-radius: 5%;
   border: none;
   color: white;
-  padding: 0px 0px 0px 0px;
+  padding: 5px 5px 5px 5px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -136,19 +120,39 @@ button {
 .total-value-cont{
   display: flex;
   flex-direction: row;
-  justify-content: center
+  justify-content: center;
+  border: solid;
+  border-radius: 5%;
+  padding-top: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-bottom: 25px;
+  background-color: #2d3c59;
+  text-align: center;
 }
 
 .navbar{
   width: 30%;
   margin-left: 700px;
-  
-
+  border-radius: 15px;
+  font-size: 30px;
+  color: #2d3c59;
 }
 
 #total_value {
   font-size: 50px;
   display: flex;
   justify-content: center;
+}
+
+.redHover:hover {
+  color: #F24968;
+  cursor: pointer;
+  position: relative;
+  right: -1px;
+  top: -1px;
+  height: auto;
+  display: block;
+  z-index: 999;
 }
 

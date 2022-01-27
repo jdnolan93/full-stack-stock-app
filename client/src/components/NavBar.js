@@ -11,10 +11,10 @@ const NavBar = () => {
         <Link to="/"><button><i className="fas fa-home"></i> Home</button></Link>
       </li>
       <li>
-        <Link to="/add"><button>Add Shares</button></Link>
+        <Link to="/add"><button><i class="fas fa-plus-circle"></i> Add Shares</button></Link>
       </li>
       <li>
-        <Link to="/calculator"><button>Calculator</button></Link>
+        <Link to="/calculator"><button><i class="fas fa-calculator"></i> Calculator</button></Link>
       </li>
     </ul>
     </>
