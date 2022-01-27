@@ -139,10 +139,25 @@ button {
   color: #2d3c59;
 }
 
+/* .navbar-button{
+  padding-right: 100px;
+} */
+
 #total_value {
   font-size: 50px;
   display: flex;
   justify-content: center;
+}
+
+#total_value:hover {
+  color: #F24968;
+  cursor: pointer;
+  position: relative;
+  right: -1px;
+  top: -1px;
+  height: auto;
+  display: block;
+  z-index: 999;
 }
 
 .redHover:hover {
@@ -155,4 +170,8 @@ button {
   display: block;
   z-index: 999;
 }
+
+
+
+
 
