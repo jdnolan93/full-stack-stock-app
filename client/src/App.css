@@ -15,6 +15,15 @@ body {
   color: #0faebf;
 }
 
+.navbar{
+  width: 30%;
+  margin-left: 700px;
+  border-radius: 15px;
+  font-size: 30px;
+  color: #2d3c59;
+}
+
+
 .column {
   height: 100%;
   display: flex;
