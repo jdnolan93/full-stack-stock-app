@@ -40,9 +40,9 @@ const ShareCard = ({share, removeShareFromDB, updateShareNo, getGraph, chartType
       <b>Amount owned: {share.noOfShares}</b>
       <b>Total value: £{(Number(share.noOfShares)*Number(share.currentPrice)).toLocaleString()}</b>
       <div className='edit-delete'>
-      <button onClick={handleDelete}><i className="fas fa-trash"></i></button>
-      <button onClick={handleEdit}> <i className="fas fa-edit"></i> </button>
-      <button onClick={handleGetGraph}>Display </button>
+      <button className='redHover' onClick={handleDelete}><i className="fas fa-trash"></i></button>
+      <button className='redHover' onClick={handleEdit}> <i className="fas fa-edit"></i> </button>
+      <button className='redHover' onClick={handleGetGraph}>Display </button>
       </div>
       </div>
     )

@@ -76,6 +76,9 @@
   user-select: none;
   touch-action: manipulation;
   outline: none;
+  border: solid;
+  border-color: white;
+  border-width: 1px;
   border-radius: 5%;
 }
 
